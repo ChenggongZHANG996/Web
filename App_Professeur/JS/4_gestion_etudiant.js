@@ -1,7 +1,7 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
-import { studentDB } from "./database/4_etudiants.js";
 import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
-import { studentService } from "./services/student-service.js";
+import { studentService } from "./services/4_gestion_etudiant.js";
+import { dbService } from "../../Configuration_Js/db-service.js";
 
 // 状态管理
 let state = {

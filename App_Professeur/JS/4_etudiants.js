@@ -1,5 +1,7 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
+import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 import { studentService } from "./services/4_etudiants.js";
+import { dbService } from "../../Configuration_Js/db-service.js";
 import { studentModel } from "./models/4_etudiants.js";
 
 // 状态

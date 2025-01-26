@@ -2,7 +2,7 @@
 import { dbService } from "../../Configuration_Js/db-service.js";
 import { baseUrl } from "../../Configuration_Js/base-url.js";
 import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
-import { courseService } from "./services/course-service.js";
+import { courseService } from "./services/3_cours.js";
 import { courseModel } from "./models/3_cours.js";
 
 // 存储课程数据的变量
