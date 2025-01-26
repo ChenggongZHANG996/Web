@@ -1,5 +1,5 @@
 /* 修改导入路径 */
-@import "../CSS/Fond_variable.css";
+@import "./Fond_variable.css";
 
 /* 基础样式 */
 * {
