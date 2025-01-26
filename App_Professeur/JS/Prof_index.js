@@ -244,7 +244,7 @@ function initializeEventListeners() {
           try {
             console.log("Loading HTML content for:", pageConfig.id);
             const response = await fetch(
-              `/App_Professeur/HTML/${pageConfig.id}.html`
+              `/Web/App_Professeur/HTML/${pageConfig.id}.html`
             );
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
@@ -358,7 +358,7 @@ async function loadPage(pageId) {
     if (!targetPage.children.length) {
       try {
         console.log("Loading HTML content for:", pageId);
-        const response = await fetch(`../HTML/${pageId}.html`);
+        const response = await fetch(`/Web/App_Professeur/HTML/${pageId}.html`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -407,7 +407,7 @@ async function loadAndInitializePageModule(pageName) {
     if (!targetPage.children.length) {
       try {
         console.log("Loading HTML content for:", pageConfig.id);
-        const response = await fetch(`../HTML/${pageConfig.id}.html`);
+        const response = await fetch(`/Web/App_Professeur/HTML/${pageConfig.id}.html`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
