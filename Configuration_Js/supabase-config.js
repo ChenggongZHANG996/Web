@@ -1,4 +1,3 @@
-import { createClient } from "./supabase.js";
 import { baseUrl } from "./base-url.js";
 
 // Supabase 配置
