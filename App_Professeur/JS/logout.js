@@ -1,4 +1,5 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
+import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 import { authService } from `${baseUrl}Inscription/authentification.js`;
 
 export async function handleLogout() {

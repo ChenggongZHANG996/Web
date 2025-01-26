@@ -1,6 +1,7 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
 import { professorService } from `${baseUrl}App_Professeur/JS/services/Prof_index.js`;
-import { supabaseClient } from `${baseUrl}Configuration_Js/supabase-config.js`;
+import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
+import { avatarService } from "./services/avatar-service.js";
 
 // 全局变量
 let currentUser = null;
