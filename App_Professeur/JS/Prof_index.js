@@ -13,27 +13,27 @@ const PAGE_CONFIG = {
   dashboard: {
     id: "0_table_board",
     title: "Tableau de bord",
-    module: "../JS/0_table_board.js"
+    module: "/Web/App_Professeur/JS/0_table_board.js"
   },
   profile: {
     id: "1_profil",
     title: "Profil",
-    module: "../JS/1_profil.js"
+    module: "/Web/App_Professeur/JS/1_profil.js"
   },
   calendar: {
     id: "2_calendrier",
     title: "Calendrier",
-    module: "../JS/2_calendrier.js"
+    module: "/Web/App_Professeur/JS/2_calendrier.js"
   },
   courses: {
     id: "3_cours",
     title: "Cours",
-    module: "../JS/3_cours.js"
+    module: "/Web/App_Professeur/JS/3_cours.js"
   },
   students: {
     id: "4_gestion_etudiant",
     title: "Gestion des étudiants",
-    module: "../JS/4_gestion_etudiant.js"
+    module: "/Web/App_Professeur/JS/4_gestion_etudiant.js"
   }
 };
 
@@ -1149,26 +1149,26 @@ function activatePageContent(pageId) {
 
 // 监听页面加载事件
 document.addEventListener("loadDashboard", async () => {
-  const dashboardModule = await import("./0_table_board.js");
+  const dashboardModule = await import("/Web/App_Professeur/JS/0_table_board.js");
   dashboardModule.loadDashboard();
 });
 
 document.addEventListener("loadProfile", async () => {
-  const profileModule = await import("./1_profil.js");
+  const profileModule = await import("/Web/App_Professeur/JS/1_profil.js");
   profileModule.loadProfile();
 });
 
 document.addEventListener("loadCalendar", async (e) => {
-  const calendarModule = await import("./2_calendrier.js");
+  const calendarModule = await import("/Web/App_Professeur/JS/2_calendrier.js");
   calendarModule.loadCalendar(e.detail?.eventId);
 });
 
 document.addEventListener("loadCourse", async (e) => {
-  const courseModule = await import("../JS/3_cours.js");
+  const courseModule = await import("/Web/App_Professeur/JS/3_cours.js");
   courseModule.loadCourse(e.detail?.courseId);
 });
 
 document.addEventListener("loadStudent", async (e) => {
-  const studentModule = await import("../JS/4_gestion_etudiant.js");
+  const studentModule = await import("/Web/App_Professeur/JS/4_gestion_etudiant.js");
   studentModule.loadStudent(e.detail?.studentId);
 });
