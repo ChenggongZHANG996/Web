@@ -412,3 +412,73 @@ function updateSelectionUI() {
   // 这里可以添加选中数量显示或其他UI更新
   console.log(`Selected students: ${state.selectedStudents.size}`);
 }
+
+// 模态框相关函数
+window.openModal = () => {
+  const modal = document.getElementById("student-modal");
+  if (modal) {
+    modal.style.display = "block";
+  }
+};
+
+window.closeModal = () => {
+  const modal = document.getElementById("student-modal");
+  if (modal) {
+    modal.style.display = "none";
+    // 重置表单
+    const form = document.getElementById("student-form");
+    if (form) {
+      form.reset();
+    }
+  }
+};
+
+// 当用户点击模态框外部时关闭模态框
+window.addEventListener("click", (event) => {
+  const modal = document.getElementById("student-modal");
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// 处理表单提交
+window.handleSubmitStudent = async (event) => {
+  event.preventDefault();
+  
+  try {
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    const studentData = {
+      first_name: formData.get("firstName"),
+      last_name: formData.get("lastName"),
+      email: formData.get("email"),
+      study_level: formData.get("level"),
+      academic_status: "active",
+      overall_progress: 0,
+      current_courses: []
+    };
+
+    await studentService.createStudent(studentData);
+    await fetchAndRenderStudents();
+    closeModal();
+    
+    // 显示成功消息
+    showNotification("Étudiant ajouté avec succès", "success");
+  } catch (error) {
+    console.error("Error creating student:", error);
+    showNotification("Erreur lors de l'ajout de l'étudiant", "error");
+  }
+};
+
+// 显示通知的辅助函数
+function showNotification(message, type = "info") {
+  const notification = document.createElement("div");
+  notification.className = `notification ${type}`;
+  notification.textContent = message;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+  }, 3000);
+}
