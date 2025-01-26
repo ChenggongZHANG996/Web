@@ -30,13 +30,40 @@ class CalendarDB {
   async getEvents(startDate, endDate) {
     try {
       const { data, error } = await this.db
-        .from('calendar_events')
-        .select('*')
-        .gte('start_time', startDate)
-        .lte('end_time', endDate);
+        .from('professor_events_manual')
+        .select(`
+          id,
+          title,
+          description,
+          start_at,
+          end_at,
+          color,
+          professor_id,
+          user_id,
+          status,
+          location,
+          is_all_day
+        `)
+        .gte('start_at', startDate)
+        .lte('end_at', endDate)
+        .order('start_at', { ascending: true });
 
       if (error) throw error;
-      return data;
+      
+      // 处理数据格式
+      return data.map(event => ({
+        id: event.id,
+        title: event.title,
+        description: event.description,
+        start: new Date(event.start_at),
+        end: new Date(event.end_at),
+        color: event.color || "#4CAF50",
+        professor_id: event.professor_id,
+        user_id: event.user_id,
+        status: event.status || "active",
+        location: event.location,
+        is_all_day: event.is_all_day === 1,
+      }));
     } catch (error) {
       console.error("Error in getEvents:", error);
       throw error;
