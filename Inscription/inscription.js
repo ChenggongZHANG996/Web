@@ -256,8 +256,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       loginForm.classList.remove("hidden");
       registerForm.classList.add("hidden");
-      tabBtns[0].classList.add("active");
-      tabBtns[1].classList.remove("active");
+      document.querySelector('.tab-btn:first-child').classList.add("active");
+      document.querySelector('.tab-btn:last-child').classList.remove("active");
 
       writeLog("Login form displayed successfully", "info");
     }
@@ -272,26 +272,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       loginForm.classList.add("hidden");
       registerForm.classList.remove("hidden");
-      tabBtns[0].classList.remove("active");
-      tabBtns[1].classList.add("active");
+      document.querySelector('.tab-btn:first-child').classList.remove("active");
+      document.querySelector('.tab-btn:last-child').classList.add("active");
 
       writeLog("Registration form displayed successfully", "info");
     }
 
     // 将函数添加到全局作用域
-    window.showRegister = function() {
-      document.querySelector('.tab-btn:first-child').classList.remove('active');
-      document.querySelector('.tab-btn:last-child').classList.add('active');
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('registerForm').style.display = 'block';
-    };
-
-    window.showLogin = function() {
-      document.querySelector('.tab-btn:first-child').classList.add('active');
-      document.querySelector('.tab-btn:last-child').classList.remove('active');
-      document.getElementById('loginForm').style.display = 'block';
-      document.getElementById('registerForm').style.display = 'none';
-    };
+    window.showLogin = showLogin;
+    window.showRegister = showRegister;
 
     // 设置默认登录凭据（只在一个地方设置）
     const defaultEmail =
