@@ -190,38 +190,44 @@ function setupEventListeners() {
     filter.addEventListener("change", handleFilterChange);
   });
 
-  // 添加课程按钮事件
-  const addButton = document.querySelector(".add-course-btn");
-  if (addButton) {
-    addButton.addEventListener("click", () => {
-      const modal = document.getElementById("course-modal");
-      if (modal) {
-        modal.classList.add("show");
-      }
-    });
+  // 添加课程按钮
+  const addCourseBtn = document.querySelector('.add-course-btn');
+  if (addCourseBtn) {
+    addCourseBtn.addEventListener('click', openModal);
   }
 
-  // 模态框关闭按钮事件
-  const closeButtons = document.querySelectorAll(".close-modal, .cancel-btn");
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = document.getElementById("course-modal");
-      if (modal) {
-        modal.classList.remove("show");
-      }
-    });
-  });
+  // 关闭模态框按钮
+  const closeModalBtn = document.querySelector('.close-modal');
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeModal);
+  }
 
-  // 保存课程按钮事件
-  const saveButton = document.querySelector(".save-btn");
-  if (saveButton) {
-    saveButton.addEventListener("click", handleSaveCourse);
+  // 取消按钮
+  const cancelBtn = document.querySelector('.cancel-btn');
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', closeModal);
+  }
+
+  // 保存按钮
+  const saveBtn = document.querySelector('.save-btn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', handleSaveCourse);
   }
 
   // 课程卡片点击事件
   document
     .querySelector(".courses-list")
     ?.addEventListener("click", handleCourseClick);
+
+  // 点击模态框外部关闭
+  const modal = document.getElementById('course-modal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
 }
 
 // 处理过滤器变化
@@ -235,70 +241,62 @@ function handleFilterChange() {
 }
 
 // 处理保存课程
-async function handleSaveCourse() {
-  const form = document.getElementById("course-form");
-  if (!form) {
-    Logger.error("Form not found!");
-    return;
-  }
+async function handleSaveCourse(e) {
+  e.preventDefault();
+  
+  try {
+    const form = document.getElementById('course-form');
+    if (!form) return;
 
-  Logger.info("Starting course save process...");
-
-  // 表单验证
-  if (form.checkValidity()) {
-    Logger.validation("Form validation passed");
     const formData = new FormData(form);
-
-    // 构建课程数据
     const courseData = {
-      title: formData.get("title"),
-      description: formData.get("description"),
-      level: formData.get("level"),
-      subject: formData.get("subject"),
-      start_date: formData.get("startDate"),
-      end_date: formData.get("endDate"),
-      course_day: formData.get("courseDay"),
-      course_time_start: formData.get("courseTimeStart"),
-      course_time_end: formData.get("courseTimeEnd"),
-      professor_id: "c7d52a50-3cff-484e-bf2b-8aa7d35389a3",
-      professor_name: "Chenggong ZHANG",
-      capacity: parseInt(formData.get("capacity")),
-      status: "à venir",
-      progression: 0,
+      title: formData.get('title'),
+      description: formData.get('description'),
+      level: formData.get('level'),
+      subject: formData.get('subject'),
+      schedule: {
+        start_date: formData.get('startDate'),
+        end_date: formData.get('endDate'),
+        day_of_week: formData.get('courseDay'),
+        start_time: formData.get('courseTimeStart'),
+        end_time: formData.get('courseTimeEnd')
+      },
+      capacity: parseInt(formData.get('capacity')),
+      status: 'active'
     };
 
-    // 记录课程数据
-    Logger.data("Course Data:", courseData);
+    await courseService.createCourse(courseData);
+    await loadCoursesFromDB();
+    closeModal();
+    showNotification('Cours ajouté avec succès', 'success');
+  } catch (error) {
+    console.error('Error saving course:', error);
+    showNotification('Erreur lors de l\'ajout du cours', 'error');
+  }
+}
 
-    try {
-      Logger.info("Saving course to database...");
-      const result = await dbService.insert("professor_courses", courseData);
+// 打开模态框
+function openModal() {
+  const modal = document.getElementById('course-modal');
+  if (modal) {
+    modal.style.display = 'block';
+    modal.classList.add('show');
+  }
+}
 
-      if (result) {
-        Logger.success("Course saved successfully!");
-
-        // 重新从数据库加载所有课程
-        await loadCoursesFromDB();
-
-        // 关闭模态框并重置表单
-        const modal = document.getElementById("course-modal");
-        if (modal) {
-          modal.style.display = "none";
-          form.reset();
-        }
-
-        showNotification("Cours ajouté avec succès!", "success");
-      }
-    } catch (error) {
-      Logger.error("Failed to save course", error);
-      showNotification(
-        `Erreur lors de l'ajout du cours: ${error.message}`,
-        "error"
-      );
+// 关闭模态框
+function closeModal() {
+  const modal = document.getElementById('course-modal');
+  if (modal) {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300);
+    // 重置表单
+    const form = document.getElementById('course-form');
+    if (form) {
+      form.reset();
     }
-  } else {
-    Logger.validation("Form validation failed");
-    form.reportValidity();
   }
 }
 
@@ -326,18 +324,15 @@ function formatDate(dateString) {
   return `${date.getDate()} ${months[month]} ${date.getFullYear()}`;
 }
 
-// 显示通知的辅助函数
-function showNotification(message, type = "info") {
-  Logger.info(`Showing notification: ${message} (${type})`);
-  const notification = document.createElement("div");
+// 显示通知
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
   notification.className = `notification ${type}`;
   notification.textContent = message;
-
   document.body.appendChild(notification);
 
   setTimeout(() => {
     notification.remove();
-    Logger.info("Notification removed");
   }, 3000);
 }
 
