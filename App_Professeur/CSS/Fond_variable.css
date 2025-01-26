@@ -23,4 +23,16 @@
   /* 边框和阴影 */
   --border-color: rgba(255, 255, 255, 0.1);
   --grid-color: rgba(0, 191, 255, 0.1);
+
+  /* 状态颜色 */
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  --info-color: #2196f3;
+
+  /* RGB 值用于透明度 */
+  --success-rgb: 76, 175, 80;
+  --warning-rgb: 255, 152, 0;
+  --danger-rgb: 244, 67, 54;
+  --info-rgb: 33, 150, 243;
 }
