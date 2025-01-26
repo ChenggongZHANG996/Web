@@ -1,5 +1,5 @@
-import { baseUrl } from "/Web/Configuration_Js/base-url.js";
-import { supabaseClient } from "/Web/Configuration_Js/supabase-config.js";
+import { baseUrl } from "../Configuration_Js/base-url.js";
+import { supabaseClient } from "../Configuration_Js/supabase-config.js";
 
 // 日志记录函数
 function writeLog(message, type = "info") {
