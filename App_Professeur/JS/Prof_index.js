@@ -956,12 +956,32 @@ async function initialize() {
     // 添加加载状态显示
     document.body.classList.add('loading');
     
-    const userSession = JSON.parse(localStorage.getItem("user_session"));
-    if (!userSession || !userSession.user) {
+    // 1. 首先检查 Supabase 的会话
+    const { data: { session }, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+    
+    if (!session) {
+      console.error("No active Supabase session");
       window.location.href = "/Web/Inscription/inscription.html";
       return;
     }
 
+    // 2. 然后再检查本地存储的会话
+    const userSession = JSON.parse(localStorage.getItem("user_session"));
+    if (!userSession || !userSession.user) {
+      console.error("No local user session found");
+      window.location.href = "/Web/Inscription/inscription.html";
+      return;
+    }
+
+    // 3. 确保两个会话ID匹配
+    if (session.user.id !== userSession.user.id) {
+      console.error("Session mismatch");
+      window.location.href = "/Web/Inscription/inscription.html";
+      return;
+    }
+
+    // 如果会话验证通过，继续初始化
     await initializeEventListeners();
     await initializeProfessorInfo();
     
@@ -970,10 +990,8 @@ async function initialize() {
     updateNavigationState(defaultPage);
   } catch (error) {
     console.error("Initialization failed:", error);
-    // 显示错误信息给用户
     showErrorMessage("Failed to load the page. Please try again.");
   } finally {
-    // 移除加载状态
     document.body.classList.remove('loading');
   }
 }
