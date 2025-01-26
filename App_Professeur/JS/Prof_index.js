@@ -13,27 +13,27 @@ const PAGE_CONFIG = {
   dashboard: {
     id: "0_table_board",
     title: "Tableau de bord",
-    module: "/Web/App_Professeur/JS/0_table_board.js"
+    module: "../JS/0_table_board.js"
   },
   profile: {
     id: "1_profil",
     title: "Profil",
-    module: "/Web/App_Professeur/JS/1_profil.js"
+    module: "../JS/1_profil.js"
   },
   calendar: {
     id: "2_calendrier",
     title: "Calendrier",
-    module: "/Web/App_Professeur/JS/2_calendrier.js"
+    module: "../JS/2_calendrier.js"
   },
   courses: {
     id: "3_cours",
     title: "Cours",
-    module: "/Web/App_Professeur/JS/3_cours.js"
+    module: "../JS/3_cours.js"
   },
   students: {
     id: "4_gestion_etudiant",
     title: "Gestion des étudiants",
-    module: "/Web/App_Professeur/JS/4_gestion_etudiant.js"
+    module: "../JS/4_gestion_etudiant.js"
   }
 };
 
@@ -358,7 +358,7 @@ async function loadPage(pageId) {
     if (!targetPage.children.length) {
       try {
         console.log("Loading HTML content for:", pageId);
-        const response = await fetch(`/Web/App_Professeur/HTML/${pageId}.html`);
+        const response = await fetch(`../HTML/${pageId}.html`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -407,7 +407,7 @@ async function loadAndInitializePageModule(pageName) {
     if (!targetPage.children.length) {
       try {
         console.log("Loading HTML content for:", pageConfig.id);
-        const response = await fetch(`/Web/App_Professeur/HTML/${pageConfig.id}.html`);
+        const response = await fetch(`../HTML/${pageConfig.id}.html`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -1164,11 +1164,11 @@ document.addEventListener("loadCalendar", async (e) => {
 });
 
 document.addEventListener("loadCourse", async (e) => {
-  const courseModule = await import("/Web/App_Professeur/JS/3_cours.js");
+  const courseModule = await import("../JS/3_cours.js");
   courseModule.loadCourse(e.detail?.courseId);
 });
 
 document.addEventListener("loadStudent", async (e) => {
-  const studentModule = await import("/Web/App_Professeur/JS/4_gestion_etudiant.js");
+  const studentModule = await import("../JS/4_gestion_etudiant.js");
   studentModule.loadStudent(e.detail?.studentId);
 });
