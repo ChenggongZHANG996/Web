@@ -135,7 +135,7 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
   return false;
 };
 
-// 将函数定义移到全局作用域
+// 将这些函数定义移到文件顶部的全局作用域
 function showLogin() {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
