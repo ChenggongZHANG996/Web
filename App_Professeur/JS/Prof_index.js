@@ -957,7 +957,7 @@ async function initialize() {
     const userSession = JSON.parse(localStorage.getItem("user_session"));
     if (!userSession || !userSession.user) {
       console.error("No user session found");
-      window.location.href = "/Inscription/inscription.html";
+      window.location.href = "/Web/Inscription/inscription.html";
       return;
     }
 
