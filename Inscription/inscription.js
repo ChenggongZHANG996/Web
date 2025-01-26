@@ -188,4 +188,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ... 其余的初始化代码 ...
+
+    // 添加按钮点击事件监听
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+
+    if (loginBtn) {
+        loginBtn.addEventListener('click', showLogin);
+    }
+    if (registerBtn) {
+        registerBtn.addEventListener('click', showRegister);
+    }
 });
