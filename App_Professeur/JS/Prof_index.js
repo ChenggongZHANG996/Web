@@ -944,7 +944,7 @@ async function handleLogout(e) {
   try {
     const { error } = await supabaseClient.auth.signOut();
     if (error) throw error;
-    window.location.href = "/Inscription/inscription.html";
+    window.location.href = "/Web/Inscription/inscription.html";
   } catch (error) {
     console.error("Error during logout:", error);
   }
@@ -953,7 +953,6 @@ async function handleLogout(e) {
 // 初始化函数
 async function initialize() {
   try {
-    // 检查用户会话
     const userSession = JSON.parse(localStorage.getItem("user_session"));
     if (!userSession || !userSession.user) {
       console.error("No user session found");
