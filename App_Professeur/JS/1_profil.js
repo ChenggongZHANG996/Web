@@ -1,6 +1,7 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
+import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 import { profileService } from "../services/1_profil.js";
-import { specialtyService } from "../services/specialty_service.js";
+import { specialtyService } from "/Web/App_Professeur/JS/services/specialty_service.js";
 
 // 模拟用户数据
 const MOCK_USER = {

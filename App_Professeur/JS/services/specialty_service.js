@@ -1,4 +1,5 @@
-import { profileDB } from "../database/1_profil.js";
+import { baseUrl } from "../../../Configuration_Js/base-url.js";
+import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
 
 class SpecialtyService {
   constructor() {
