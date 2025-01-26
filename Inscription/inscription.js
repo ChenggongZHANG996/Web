@@ -209,12 +209,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const userType = document.querySelector('input[name="loginUserType"]:checked').value;
 
         try {
-            const { data: authData, error: authError } = await supabaseClient.auth.signInWithPassword({
+            const { data: { user }, error } = await supabaseClient.auth.signInWithPassword({
                 email: email,
                 password: password,
             });
 
-            if (authError) throw authError;
+            if (error) throw error;
+
+            // 获取用户类型
+            const { data: userData, error: userError } = await supabaseClient
+                .from('users')
+                .select('user_type')
+                .eq('id', user.id)
+                .single();
+
+            if (userError) throw userError;
+
+            // 保存完整的用户信息到本地存储
+            localStorage.setItem('user_session', JSON.stringify({
+                user: {
+                    ...user,
+                    user_type: userData.user_type
+                }
+            }));
 
             // 添加日志
             console.log("User type:", userType);

@@ -953,46 +953,69 @@ async function handleLogout(e) {
 // 初始化函数
 async function initialize() {
   try {
-    // 添加加载状态显示
+    console.group("初始化流程");
+    console.log("1. 开始初始化...");
     document.body.classList.add('loading');
     
-    // 1. 首先检查 Supabase 的会话
+    // 1. 检查 Supabase 会话
+    console.log("2. 检查 Supabase 会话...");
     const { data: { session }, error } = await supabaseClient.auth.getSession();
-    if (error) throw error;
+    if (error) {
+      console.error("Supabase 会话检查错误:", error);
+      throw error;
+    }
+    console.log("Supabase 会话状态:", session ? "有效" : "无效");
     
     if (!session) {
-      console.error("No active Supabase session");
+      console.error("没有活动的 Supabase 会话");
       window.location.href = "/Web/Inscription/inscription.html";
       return;
     }
 
-    // 2. 然后再检查本地存储的会话
+    // 2. 检查本地存储的会话
+    console.log("3. 检查本地存储会话...");
     const userSession = JSON.parse(localStorage.getItem("user_session"));
+    console.log("本地会话数据:", userSession);
+    
     if (!userSession || !userSession.user) {
-      console.error("No local user session found");
+      console.error("没有本地用户会话");
       window.location.href = "/Web/Inscription/inscription.html";
       return;
     }
 
-    // 3. 确保两个会话ID匹配
+    // 3. 检查用户类型
+    console.log("4. 检查用户类型...");
+    if (userSession.user.user_type !== 'tutor') {
+      console.error("用户不是教师类型");
+      window.location.href = "/Web/Inscription/inscription.html";
+      return;
+    }
+
+    // 4. 检查会话匹配
+    console.log("5. 验证会话匹配...");
     if (session.user.id !== userSession.user.id) {
-      console.error("Session mismatch");
+      console.error("会话不匹配");
+      console.log("Supabase ID:", session.user.id);
+      console.log("Local ID:", userSession.user.id);
       window.location.href = "/Web/Inscription/inscription.html";
       return;
     }
 
-    // 如果会话验证通过，继续初始化
+    console.log("6. 所有验证通过，继续初始化...");
     await initializeEventListeners();
     await initializeProfessorInfo();
     
     const defaultPage = "dashboard";
     await loadAndInitializePageModule(defaultPage);
     updateNavigationState(defaultPage);
+    
+    console.log("7. 初始化完成");
   } catch (error) {
-    console.error("Initialization failed:", error);
+    console.error("初始化失败:", error);
     showErrorMessage("Failed to load the page. Please try again.");
   } finally {
     document.body.classList.remove('loading');
+    console.groupEnd();
   }
 }
 
