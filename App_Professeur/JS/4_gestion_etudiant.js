@@ -23,20 +23,13 @@ let state = {
 export async function initialize() {
   console.log("=== Student Management Initialization START ===");
   try {
-    // 1. 初始化数据库连接
-    console.log("1. Checking database connection...");
-    if (!studentDB || !studentDB.db) {
-      throw new Error("Database connection not initialized");
-    }
-    console.log("Database connection verified");
-
-    // 2. 设置事件监听器
-    console.log("2. Setting up event listeners...");
+    // 1. 设置事件监听器
+    console.log("1. Setting up event listeners...");
     setupEventListeners();
     console.log("Event listeners setup completed");
 
-    // 3. 获取并显示初始数据
-    console.log("3. Fetching initial student data...");
+    // 2. 获取并显示初始数据
+    console.log("2. Fetching initial student data...");
     await fetchAndRenderStudents();
     console.log("Initial data fetch and render completed");
 
@@ -55,33 +48,9 @@ export async function initialize() {
 // 获取并渲染学生数据
 async function fetchAndRenderStudents() {
   try {
-    console.log("=== Fetching Students START ===");
-
-    // 1. 从数据库获取数据
-    const { students, total } = await studentDB.getStudents(
-      state.filters,
-      state.pagination.currentPage,
-      state.pagination.itemsPerPage
-    );
-
-    console.log("Students data received:", {
-      count: students?.length,
-      total,
-      firstStudent: students?.[0],
-    });
-
-    // 2. 更新状态
-    state.students = students || [];
-    state.pagination.totalPages = Math.ceil(
-      total / state.pagination.itemsPerPage
-    );
-
-    // 3. 渲染界面
+    const students = await studentService.getStudents();
+    state.students = students;
     renderStudents();
-    updateTableInfo();
-    renderPagination();
-
-    console.log("=== Fetching Students END ===");
   } catch (error) {
     console.error("Error fetching students:", error);
     throw error;
