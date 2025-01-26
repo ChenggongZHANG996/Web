@@ -1,5 +1,8 @@
 import { baseUrl } from "./base-url.js";
 
+// 从全局 supabase 对象获取 createClient
+const { createClient } = supabase;
+
 // Supabase 配置
 const SUPABASE_CONFIG = {
   // 数据库连接信息
