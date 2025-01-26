@@ -1,5 +1,5 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
-import { professorService } from `${baseUrl}App_Professeur/JS/services/Prof_index.js`;
+import { professorService } from "./services/Prof_index.js";
 import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 import { avatarService } from "./services/avatar-service.js";
 
