@@ -1,5 +1,5 @@
 // 导入数据库服务
-import { dbService } from "/Configuration_Js/db-service.js";
+import { dbService } from "../../Configuration_Js/db-service.js";
 import { baseUrl } from "../../Configuration_Js/base-url.js";
 import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 import { courseService } from "./services/course-service.js";
