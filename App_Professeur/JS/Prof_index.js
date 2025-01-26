@@ -13,27 +13,27 @@ const PAGE_CONFIG = {
   dashboard: {
     id: "0_table_board",
     title: "Tableau de bord",
-    module: "/Web/App_Professeur/JS/0_table_board.js"
+    module: "./0_table_board.js"
   },
   profile: {
     id: "1_profil",
     title: "Profil",
-    module: "/Web/App_Professeur/JS/1_profil.js"
+    module: "./1_profil.js"
   },
   calendar: {
     id: "2_calendrier",
     title: "Calendrier",
-    module: "/Web/App_Professeur/JS/2_calendrier.js"
+    module: "./2_calendrier.js"
   },
   courses: {
     id: "3_cours",
     title: "Cours",
-    module: "/Web/App_Professeur/JS/3_cours.js"
+    module: "./3_cours.js"
   },
   students: {
     id: "4_gestion_etudiant",
     title: "Gestion des étudiants",
-    module: "/Web/App_Professeur/JS/4_gestion_etudiant.js"
+    module: "./4_gestion_etudiant.js"
   }
 };
 

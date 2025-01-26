@@ -1,6 +1,6 @@
 import { baseUrl } from "../../../Configuration_Js/base-url.js";
 import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
-import { professorDB } from `${baseUrl}App_Professeur/JS/database/Prof_index.js`;
+import { professorDB } from "../database/Prof_index.js";
 
 class ProfileService {
   constructor() {
