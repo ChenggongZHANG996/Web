@@ -6,9 +6,9 @@ class StudentService {
     this.db = studentDB;
   }
 
-  async getStudents() {
+  async getStudents(filters = { search: "", level: "all", status: "all" }) {
     try {
-      return await this.db.getStudents();
+      return await this.db.getStudents(filters);
     } catch (error) {
       console.error("Error in StudentService.getStudents:", error);
       throw error;

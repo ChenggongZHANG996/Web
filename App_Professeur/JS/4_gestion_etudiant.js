@@ -48,7 +48,7 @@ export async function initialize() {
 // 获取并渲染学生数据
 async function fetchAndRenderStudents() {
   try {
-    const students = await studentService.getStudents();
+    const students = await studentService.getStudents(state.filters);
     state.students = students || [];
     renderStudents();
   } catch (error) {
@@ -295,7 +295,7 @@ window.handleImport = () => {
   // 创建文件输入元素
   const fileInput = document.createElement("input");
   fileInput.type = "file";
-  fileInput.accept = ".csv, .xlsx";
+  fileInput.accept = ".csv";
   fileInput.style.display = "none";
   document.body.appendChild(fileInput);
 
@@ -305,21 +305,45 @@ window.handleImport = () => {
     if (!file) return;
 
     try {
-      const formData = new FormData();
-      formData.append("file", file);
+      const reader = new FileReader();
+      reader.onload = async (event) => {
+        try {
+          // 解析 CSV 数据
+          const csvData = event.target.result;
+          const lines = csvData.split('\n');
+          const headers = lines[0].split(',');
+          
+          // 跳过标题行，处理数据行
+          for (let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue;
+            
+            const values = lines[i].split(',');
+            const studentData = {
+              first_name: values[1]?.trim(),
+              last_name: values[2]?.trim(),
+              email: values[3]?.trim(),
+              study_level: values[4]?.trim(),
+              academic_status: values[7]?.trim() || 'active',
+              overall_progress: parseInt(values[6]) || 0,
+              current_courses: []
+            };
 
-      // 调用导入API
-      const response = await studentDB.importStudents(formData);
-      console.log("Import successful:", response);
+            await studentService.createStudent(studentData);
+          }
 
-      // 刷新学生列表
-      await fetchAndRenderStudents();
+          // 刷新学生列表
+          await fetchAndRenderStudents();
+          showNotification("Import réussi !", "success");
+        } catch (error) {
+          console.error("Error processing CSV:", error);
+          showNotification("Erreur lors du traitement du fichier CSV", "error");
+        }
+      };
 
-      // 显示成功消息
-      alert("Import réussi !");
+      reader.readAsText(file);
     } catch (error) {
       console.error("Import failed:", error);
-      alert("Échec de l'import: " + error.message);
+      showNotification("Échec de l'import: " + error.message, "error");
     } finally {
       document.body.removeChild(fileInput);
     }
@@ -332,11 +356,7 @@ window.handleImport = () => {
 window.handleExport = async () => {
   try {
     // 获取所有学生数据
-    const { students } = await studentDB.getStudents(
-      { search: "", level: "all", status: "all" },
-      1,
-      1000
-    );
+    const students = await studentService.getStudents({ search: "", level: "all", status: "all" });
 
     // 准备CSV数据
     const headers = [
@@ -347,7 +367,7 @@ window.handleExport = async () => {
       "Niveau",
       "Cours",
       "Progrès",
-      "Statut",
+      "Statut"
     ];
 
     const csvData = students.map((student) => [
@@ -358,13 +378,13 @@ window.handleExport = async () => {
       student.study_level,
       student.current_courses?.length || 0,
       student.overall_progress || 0,
-      student.academic_status,
+      student.academic_status
     ]);
 
     // 创建CSV内容
     const csvContent = [
       headers.join(","),
-      ...csvData.map((row) => row.join(",")),
+      ...csvData.map((row) => row.join(","))
     ].join("\n");
 
     // 创建Blob并下载
@@ -373,10 +393,7 @@ window.handleExport = async () => {
     const url = URL.createObjectURL(blob);
 
     link.setAttribute("href", url);
-    link.setAttribute(
-      "download",
-      `students_export_${new Date().toISOString().split("T")[0]}.csv`
-    );
+    link.setAttribute("download", `students_export_${new Date().toISOString().split("T")[0]}.csv`);
     link.style.display = "none";
 
     document.body.appendChild(link);
@@ -386,10 +403,10 @@ window.handleExport = async () => {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 
-    console.log("Export successful");
+    showNotification("Export réussi !", "success");
   } catch (error) {
     console.error("Export failed:", error);
-    alert("Échec de l'export: " + error.message);
+    showNotification("Échec de l'export: " + error.message, "error");
   }
 };
 
