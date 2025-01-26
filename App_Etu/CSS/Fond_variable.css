@@ -1,0 +1,26 @@
+:root {
+  /* 主色调 */
+  --sky-blue: #00bfff; /* 天蓝色 */
+  --light-blue: #87ceeb; /* 浅蓝色 */
+  --deep-blue: #0066cc; /* 深蓝色 */
+  --cyber-black: #0a1525; /* 深蓝黑 */
+
+  /* 更新主色调 */
+  --primary-color: var(--sky-blue);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--deep-blue);
+
+  /* 背景色 */
+  --bg-primary: var(--cyber-black);
+  --bg-secondary: #0f1d32; /* 深蓝背景 */
+  --bg-tertiary: #142942; /* 稍浅蓝背景 */
+
+  /* 文字颜色 */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+
+  /* 边框和阴影 */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --grid-color: rgba(0, 191, 255, 0.1);
+}

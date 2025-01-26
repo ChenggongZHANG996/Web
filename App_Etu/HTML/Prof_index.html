@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Professeur</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="/App_Professeur/CSS/Fond_variable.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/Prof_index.css" />
+    <!-- 各个页面的样式 -->
+    <link rel="stylesheet" href="/App_Professeur/CSS/0_table_board.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/1_profil.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/2_calendrier.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/3_cours.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/4_gestion_etudiant.css" />
+    <link rel="stylesheet" href="/App_Professeur/CSS/setting.css" />
+    <!-- 字体和图标 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* 通知列表样式 */
+      .notification-list {
+        width: 320px;
+        max-height: 400px;
+        overflow-y: auto;
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .notification-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .notification-header h3 {
+        font-size: 16px;
+        color: var(--text-primary);
+        margin: 0;
+      }
+
+      .mark-all-read-btn {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .mark-all-read-btn:hover {
+        background-color: var(--hover-color);
+      }
+
+      .notification-items {
+        padding: 8px 0;
+      }
+
+      .notification-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        position: relative;
+      }
+
+      .notification-item:hover {
+        background-color: var(--hover-color);
+      }
+
+      .notification-item.unread {
+        background-color: var(--bg-highlight);
+      }
+
+      .notification-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .notification-icon i {
+        color: var(--primary-color);
+        font-size: 14px;
+      }
+
+      .notification-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .notification-title {
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .notification-message {
+        color: var(--text-secondary);
+        font-size: 13px;
+        margin-bottom: 4px;
+        line-height: 1.4;
+      }
+
+      .notification-time {
+        color: var(--text-tertiary);
+        font-size: 12px;
+      }
+
+      .unread-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+      }
+
+      .no-notifications {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+        color: var(--text-tertiary);
+      }
+
+      .no-notifications i {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .no-notifications p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* 滚动条样式 */
+      .notification-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .notification-list::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .notification-list::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-thumb);
+        border-radius: 3px;
+      }
+
+      .notification-list::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scroll-thumb-hover);
+      }
+    </style>
+    <!-- 首先加载 Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- 然后按顺序加载其他脚本 -->
+    <script type="module" src="/Configuration_Js/supabase-config.js"></script>
+    <script
+      type="module"
+      src="/App_Professeur/JS/database/Prof_index.js"
+    ></script>
+    <script
+      type="module"
+      src="/App_Professeur/JS/services/Prof_index.js"
+    ></script>
+    <script type="module" src="/App_Professeur/JS/Prof_index.js"></script>
+  </head>
+  <body>
+    <!-- 侧边栏导航 -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <input type="file" id="avatar-upload" hidden accept="image/*" />
+        <img
+          src="/App_Professeur/Image/default-avatar.png"
+          alt="Profile"
+          class="profile-img"
+          style="cursor: pointer"
+          onclick="document.getElementById('avatar-upload').click();"
+        />
+        <h3 class="teacher-name">Prof. Smith</h3>
+      </div>
+      <ul class="nav-links">
+        <li class="active">
+          <a href="#dashboard"><i class="fas fa-home"></i>Tableau de bord</a>
+        </li>
+        <li>
+          <a href="#profile"><i class="fas fa-user"></i>Profil</a>
+        </li>
+        <li>
+          <a href="#calendar"><i class="fas fa-calendar"></i>Calendrier</a>
+        </li>
+        <li>
+          <a href="#courses"><i class="fas fa-book"></i>Cours</a>
+        </li>
+        <li>
+          <a href="#students"><i class="fas fa-users"></i>Étudiants</a>
+        </li>
+        <li class="logout-item">
+          <a href="#" id="logoutBtn" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            Déconnexion
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+      <!-- 顶部栏 -->
+      <header class="top-bar">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Rechercher..." />
+        </div>
+        <div class="top-bar-right">
+          <!-- 通知部分 -->
+          <div class="notification-container">
+            <button class="notification-btn" id="notificationBtn">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+            <div class="notification-dropdown">
+              <div class="notification-header">
+                <h3>Notifications</h3>
+              </div>
+              <div class="notification-list">
+                <!-- 通知项目将在这里动态添加 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 设置部分 -->
+          <div class="settings-container">
+            <button class="settings-btn">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="settings-dropdown">
+              <div class="settings-header">
+                <h3>Paramètres</h3>
+              </div>
+              <div class="settings-items">
+                <!-- 设置项目 -->
+                <a href="#" class="settings-item">
+                  <i class="fas fa-language"></i>
+                  <span>Langue</span>
+                </a>
+                <a href="#" class="settings-item">
+                  <i class="fas fa-palette"></i>
+                  <span>Thème</span>
+                </a>
+                <a href="#" class="settings-item">
+                  <i class="fas fa-sliders-h"></i>
+                  <span>Préférences</span>
+                </a>
+                <a href="#" class="settings-item danger">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Déconnexion</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 内容显示区域 -->
+      <div id="content-area">
+        <!-- 各功能页面的容器 -->
+        <div id="0_table_board" class="page-content active"></div>
+        <div id="1_profil" class="page-content"></div>
+        <div id="2_calendrier" class="page-content"></div>
+        <div id="3_cours" class="page-content"></div>
+        <div id="4_gestion_etudiant" class="page-content"></div>
+      </div>
+    </main>
+
+    <!-- 修改脚本标签，添加type="module" -->
+    <script type="module">
+      import { handleLogout } from "../JS/logout.js";
+
+      // 等待 DOM 加载完成
+      document.addEventListener("DOMContentLoaded", function () {
+        // 获取注销按钮并添加点击事件监听器
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", async function (e) {
+            e.preventDefault();
+            await handleLogout();
+          });
+        }
+      });
+    </script>
+
+    <!-- 保留原有的 script 标签 -->
+    <script type="module" src="../JS/Prof_index.js"></script>
+  </body>
+</html>
