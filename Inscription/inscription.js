@@ -278,9 +278,20 @@ document.addEventListener("DOMContentLoaded", async function () {
       writeLog("Registration form displayed successfully", "info");
     }
 
-    // 将函数添加到window对象
-    window.showLogin = showLogin;
-    window.showRegister = showRegister;
+    // 将函数添加到全局作用域
+    window.showRegister = function() {
+      document.querySelector('.tab-btn:first-child').classList.remove('active');
+      document.querySelector('.tab-btn:last-child').classList.add('active');
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'block';
+    };
+
+    window.showLogin = function() {
+      document.querySelector('.tab-btn:first-child').classList.add('active');
+      document.querySelector('.tab-btn:last-child').classList.remove('active');
+      document.getElementById('loginForm').style.display = 'block';
+      document.getElementById('registerForm').style.display = 'none';
+    };
 
     // 设置默认登录凭据（只在一个地方设置）
     const defaultEmail =
