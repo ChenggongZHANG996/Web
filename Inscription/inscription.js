@@ -217,9 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 3. 验证用户类型并跳转
             if (userType === 'tutor') {
-                window.location.href = "/Web/App_Professeur/HTML/Prof_index.html";
+                window.location.href = "/App_Professeur/HTML/Prof_index.html";
             } else {
-                window.location.href = "/Web/App_Etudiant/HTML/Student_index.html";
+                window.location.href = "/App_Etudiant/HTML/Student_index.html";
             }
 
             writeLog("Connexion réussie", "success");
