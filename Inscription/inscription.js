@@ -199,4 +199,41 @@ document.addEventListener('DOMContentLoaded', function() {
     if (registerBtn) {
         registerBtn.addEventListener('click', showRegister);
     }
+
+    // 登录表单提交处理
+    loginForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+        const userType = document.querySelector('input[name="loginUserType"]:checked').value;
+
+        try {
+            const { data: authData, error: authError } = await supabaseClient.auth.signInWithPassword({
+                email: email,
+                password: password,
+            });
+
+            if (authError) throw authError;
+
+            // 添加日志
+            console.log("User type:", userType);
+            console.log("Base URL:", baseUrl);
+
+            // 跳转前打印完整URL
+            const profUrl = `${baseUrl}App_Professeur/HTML/Prof_index.html`;
+            console.log("Redirecting to:", profUrl);
+
+            if (userType === 'tutor') {
+                window.location.href = profUrl;
+            } else {
+                window.location.href = `${baseUrl}App_Etudiant/HTML/Student_index.html`;
+            }
+
+            writeLog("Connexion réussie", "success");
+        } catch (error) {
+            writeLog(`Erreur de connexion: ${error.message}`, "error");
+            showError(error.message);
+        }
+    });
 });
