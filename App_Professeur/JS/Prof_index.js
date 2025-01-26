@@ -1149,26 +1149,26 @@ function activatePageContent(pageId) {
 
 // 监听页面加载事件
 document.addEventListener("loadDashboard", async () => {
-  const dashboardModule = await import("/Web/App_Professeur/JS/0_table_board.js");
+  const dashboardModule = await import("./0_table_board.js");
   dashboardModule.loadDashboard();
 });
 
 document.addEventListener("loadProfile", async () => {
-  const profileModule = await import("/Web/App_Professeur/JS/1_profil.js");
+  const profileModule = await import("./1_profil.js");
   profileModule.loadProfile();
 });
 
 document.addEventListener("loadCalendar", async (e) => {
-  const calendarModule = await import("/Web/App_Professeur/JS/2_calendrier.js");
+  const calendarModule = await import("./2_calendrier.js");
   calendarModule.loadCalendar(e.detail?.eventId);
 });
 
 document.addEventListener("loadCourse", async (e) => {
-  const courseModule = await import("/Web/App_Professeur/JS/3_cours.js");
+  const courseModule = await import("./3_cours.js");
   courseModule.loadCourse(e.detail?.courseId);
 });
 
 document.addEventListener("loadStudent", async (e) => {
-  const studentModule = await import("/Web/App_Professeur/JS/4_gestion_etudiant.js");
+  const studentModule = await import("./4_gestion_etudiant.js");
   studentModule.loadStudent(e.detail?.studentId);
 });

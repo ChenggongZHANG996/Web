@@ -1,8 +1,8 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
-import { calendarService } from `${baseUrl}App_Professeur/JS/services/2_calendrier.js`;
+import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
+import { calendarService } from "./services/calendar-service.js";
 import { calendarModel } from `${baseUrl}App_Professeur/JS/models/2_calendrier.js`;
 import { dbService } from "../../Configuration_Js/db-service.js";
-import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
 
 // 日历状态管理
 const calendarState = {
