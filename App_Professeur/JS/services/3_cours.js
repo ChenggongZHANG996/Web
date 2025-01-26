@@ -6,7 +6,7 @@ class CourseService {
   constructor() {
     this.db = courseDB;
   }
-
+  
   async getCourses() {
     try {
       return await this.db.getCourses();
@@ -19,4 +19,5 @@ class CourseService {
   // 添加其他课程相关的服务方法
 }
 
+// 确保导出名称正确
 export const courseService = new CourseService();
