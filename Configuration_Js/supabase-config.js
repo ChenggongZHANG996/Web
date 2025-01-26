@@ -1,3 +1,4 @@
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
 import { baseUrl } from "./base-url.js";
 
 // 从全局 supabase 对象获取 createClient

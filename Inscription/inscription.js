@@ -188,4 +188,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ... 其余的初始化代码 ...
+
+    // 登录表单提交处理
+    loginForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+        const userType = document.querySelector('input[name="loginUserType"]:checked').value;
+
+        try {
+            // 1. 先进行登录验证
+            const { data: authData, error: authError } = await supabaseClient.auth.signInWithPassword({
+                email: email,
+                password: password,
+            });
+
+            if (authError) throw authError;
+
+            // 2. 获取用户信息
+            const { data: userData, error: userError } = await supabaseClient
+                .from('users')
+                .select('role')
+                .eq('id', authData.user.id)
+                .single();
+
+            if (userError) throw userError;
+
+            // 3. 验证用户类型并跳转
+            if (userType === 'tutor') {
+                window.location.href = "/Web/App_Professeur/HTML/Prof_index.html";
+            } else {
+                window.location.href = "/Web/App_Etudiant/HTML/Student_index.html";
+            }
+
+            writeLog("Connexion réussie", "success");
+        } catch (error) {
+            writeLog(`Erreur de connexion: ${error.message}`, "error");
+            showError(error.message);
+        }
+    });
 });
