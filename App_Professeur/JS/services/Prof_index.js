@@ -1,13 +1,26 @@
+import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
 import { baseUrl } from "../../../Configuration_Js/base-url.js";
 import { professorDB } from "../database/Prof_index.js";
 
 class ProfessorService {
   constructor() {
-    this.db = professorDB;
+    this.client = supabaseClient;
   }
 
   async getProfessorProfile(professorId) {
-    return await this.db.getProfessorInfo(professorId);
+    try {
+      const { data, error } = await this.client
+        .from("users")
+        .select("first_name, last_name")
+        .eq("id", professorId)
+        .single();
+
+      if (error) throw error;
+      return data;
+    } catch (error) {
+      console.error("Error fetching professor profile:", error);
+      throw error;
+    }
   }
 }
 
