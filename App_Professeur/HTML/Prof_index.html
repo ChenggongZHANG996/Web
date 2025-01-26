@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <base href="https://chenggongzhang996.github.io/Web/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Professeur</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="../CSS/Fond_variable.css" />
+    <link rel="stylesheet" href="../CSS/Prof_index.css" />
+    <!-- 各个页面的样式 -->
+    <link rel="stylesheet" href="../CSS/0_table_board.css" />
+    <link rel="stylesheet" href="../CSS/1_profil.css" />
+    <link rel="stylesheet" href="../CSS/2_calendrier.css" />
+    <link rel="stylesheet" href="../CSS/3_cours.css" />
+    <link rel="stylesheet" href="../CSS/4_gestion_etudiant.css" />
+    <link rel="stylesheet" href="../CSS/setting.css" />
+    <!-- 字体和图标 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* 通知列表样式 */
+      .notification-list {
+        width: 320px;
+        max-height: 400px;
+        overflow-y: auto;
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .notification-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .notification-header h3 {
+        font-size: 16px;
+        color: var(--text-primary);
+        margin: 0;
+      }
+
+      .mark-all-read-btn {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .mark-all-read-btn:hover {
+        background-color: var(--hover-color);
+      }
+
+      .notification-items {
+        padding: 8px 0;
+      }
+
+      .notification-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        position: relative;
+      }
+
+      .notification-item:hover {
+        background-color: var(--hover-color);
+      }
+
+      .notification-item.unread {
+        background-color: var(--bg-highlight);
+      }
+
+      .notification-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .notification-icon i {
+        color: var(--primary-color);
+        font-size: 14px;
+      }
+
+      .notification-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .notification-title {
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .notification-message {
+        color: var(--text-secondary);
+        font-size: 13px;
+        margin-bottom: 4px;
+        line-height: 1.4;
+      }
+
+      .notification-time {
+        color: var(--text-tertiary);
+        font-size: 12px;
+      }
+
+      .unread-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+      }
+
+      .no-notifications {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+        color: var(--text-tertiary);
+      }
+
+      .no-notifications i {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .no-notifications p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* 滚动条样式 */
+      .notification-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .notification-list::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .notification-list::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-thumb);
+        border-radius: 3px;
+      }
+
+      .notification-list::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scroll-thumb-hover);
+      }
+
+      /* 添加骨架屏样式 */
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+
+      .profile-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        padding: 1px;
+        background: linear-gradient(45deg, #007bff, #ffffff, #007bff);
+        background-size: 200% 200%;
+        animation: gradient 2s ease infinite;
+      }
+
+      .profile-img-placeholder {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        padding: 1px;
+        background: linear-gradient(45deg, #007bff, #ffffff, #007bff);
+        background-size: 200% 200%;
+        animation: gradient 2s ease infinite;
+      }
+
+      .teacher-name.skeleton {
+        height: 24px;
+        width: 150px;
+        margin: 0 auto;
+        border-radius: 4px;
+      }
+
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-secondary);
+        border-radius: 8px;
+        padding: 8px 16px;
+        width: 300px;
+        transition: none; /* 移除过渡效果 */
+      }
+
+      .search-bar:focus-within {
+        transform: none; /* 移除下滑效果 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-bar {
+        position: relative;
+      }
+
+      .search-group {
+        margin-bottom: 16px;
+      }
+
+      .search-group-header {
+        padding: 8px 16px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        background-color: var(--bg-secondary);
+        border-radius: 4px;
+        margin-bottom: 8px;
+        font-size: 0.875rem;
+      }
+
+      .search-results {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        background: var(--bg-primary);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 8px;
+        max-height: 400px;
+        overflow-y: auto;
+        z-index: 1000;
+        padding: 8px;
+      }
+
+      .search-result-item {
+        padding: 8px 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: background-color 0.2s;
+        border-radius: 4px;
+      }
+
+      .search-result-item:hover,
+      .search-result-item.selected {
+        background-color: var(--bg-secondary);
+      }
+
+      .search-result-item.selected {
+        border-left: 3px solid var(--primary-color);
+      }
+
+      .search-result-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        background-color: var(--bg-secondary);
+        border-radius: 50%;
+      }
+
+      .search-result-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .search-result-title {
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 2px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .search-result-description {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .no-results {
+        padding: 16px;
+        text-align: center;
+        color: var(--text-secondary);
+      }
+
+      /* 添加高亮样式 */
+      .highlight {
+        background-color: #ffeb3b;
+        color: #000;
+        padding: 0 2px;
+        border-radius: 2px;
+        font-weight: 500;
+        margin: 0 1px;
+      }
+    </style>
+    <!-- 修改回最初版本 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- 然后按顺序加载其他脚本 -->
+    <script type="module" src="../../Configuration_Js/supabase-config.js"></script>
+    <script type="module" src="../JS/database/Prof_index.js"></script>
+    <script type="module" src="../JS/services/Prof_index.js"></script>
+    <script type="module" src="../JS/services/avatar-service.js"></script>
+    <script type="module" src="../JS/Prof_index.js"></script>
+  </head>
+  <body>
+    <!-- 侧边栏导航 -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <input type="file" id="avatar-upload" hidden accept="image/*" />
+        <img
+          src=""
+          alt="Profile"
+          class="profile-img"
+          id="profile-avatar"
+          style="cursor: pointer; display: none; margin: 0 auto"
+          onclick="document.getElementById('avatar-upload').click();"
+        />
+        <div class="profile-img-placeholder"></div>
+        <h3 class="teacher-name"></h3>
+      </div>
+      <ul class="nav-links">
+        <li class="active">
+          <a href="#dashboard"><i class="fas fa-home"></i>Tableau de bord</a>
+        </li>
+        <li>
+          <a href="#profile"><i class="fas fa-user"></i>Profil</a>
+        </li>
+        <li>
+          <a href="#calendar"><i class="fas fa-calendar"></i>Calendrier</a>
+        </li>
+        <li>
+          <a href="#courses"><i class="fas fa-book"></i>Cours</a>
+        </li>
+        <li>
+          <a href="#students"><i class="fas fa-users"></i>Étudiants</a>
+        </li>
+        <li class="logout-item">
+          <a href="#" id="logoutBtn" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            Déconnexion
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+      <!-- 顶部栏 -->
+      <header class="top-bar">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="globalSearch"
+            placeholder="Rechercher..."
+            autocomplete="off"
+          />
+          <div class="search-results" id="searchResults">
+            <!-- 搜索结果将在这里动态显示 -->
+          </div>
+        </div>
+        <div class="top-bar-right">
+          <!-- 通知部分 -->
+          <div class="notification-container">
+            <button class="notification-btn" id="notificationBtn">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+            <div class="notification-dropdown">
+              <div class="notification-header">
+                <h3>Notifications</h3>
+              </div>
+              <div class="notification-list">
+                <!-- 通知项目将在这里动态添加 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 设置部分 -->
+          <div class="settings-container">
+            <button class="settings-btn">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="settings-dropdown">
+              <div class="settings-header">
+                <h3>Paramètres</h3>
+              </div>
+              <div class="settings-items">
+                <!-- 设置项目 -->
+                <a href="#" class="settings-item">
+                  <i class="fas fa-language"></i>
+                  <span>Langue</span>
+                </a>
+                <a href="#" class="settings-item">
+                  <i class="fas fa-palette"></i>
+                  <span>Thème</span>
+                </a>
+                <a href="#" class="settings-item">
+                  <i class="fas fa-sliders-h"></i>
+                  <span>Préférences</span>
+                </a>
+                <a href="#" class="settings-item danger">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Déconnexion</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 内容显示区域 -->
+      <div id="content-area">
+        <!-- 各功能页面的容器 -->
+        <div id="0_table_board" class="page-content active"></div>
+        <div id="1_profil" class="page-content"></div>
+        <div id="2_calendrier" class="page-content"></div>
+        <div id="3_cours" class="page-content"></div>
+        <div id="4_gestion_etudiant" class="page-content"></div>
+      </div>
+    </main>
+
+    <!-- 修改脚本标签，添加type="module" -->
+    <script type="module">
+      import { handleLogout } from "../JS/logout.js";
+      import { avatarService } from "../JS/services/avatar-service.js";
+      import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", async function (e) {
+            e.preventDefault();
+            await handleLogout();
+          });
+        }
+      });
+
+      async function loadUserInfo() {
+        try {
+          const {
+            data: { user },
+          } = await supabaseClient.auth.getUser();
+          if (user) {
+            const avatarUrl = await avatarService.getCurrentAvatar(user.id);
+            const profileImg = document.getElementById("profile-avatar");
+            profileImg.src = avatarUrl;
+            profileImg.style.display = "block";
+            document.querySelector(".profile-img-placeholder").style.display =
+              "none";
+
+            const { data: userData, error } = await supabaseClient
+              .from("users")
+              .select("first_name, last_name")
+              .eq("id", user.id)
+              .single();
+
+            if (error) throw error;
+
+            const teacherName = document.querySelector(".teacher-name");
+            teacherName.textContent = `Prof. ${userData.first_name} ${userData.last_name}`;
+          }
+        } catch (error) {}
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadUserInfo();
+        document
+          .getElementById("avatar-upload")
+          .addEventListener("change", handleAvatarUpload);
+      });
+
+      async function handleAvatarUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        try {
+          const {
+            data: { user },
+          } = await supabaseClient.auth.getUser();
+          if (!user) return;
+
+          const currentAvatarUrl =
+            document.getElementById("profile-avatar").src;
+          const newAvatarUrl = await avatarService.uploadAvatar(user.id, file);
+          document.getElementById("profile-avatar").src = newAvatarUrl;
+          await avatarService.deleteOldAvatar(user.id, currentAvatarUrl);
+        } catch (error) {}
+      }
+
+      // 搜索功能
+      class GlobalSearch {
+        constructor() {
+          this.searchInput = document.getElementById("globalSearch");
+          this.searchResults = document.getElementById("searchResults");
+          this.selectedIndex = -1;
+          this.currentResults = [];
+          this.setupEventListeners();
+        }
+
+        setupEventListeners() {
+          this.searchInput.addEventListener(
+            "input",
+            this.handleSearch.bind(this)
+          );
+          this.searchInput.addEventListener(
+            "keydown",
+            this.handleKeydown.bind(this)
+          );
+          document.addEventListener("click", (e) => {
+            if (
+              !this.searchInput.contains(e.target) &&
+              !this.searchResults.contains(e.target)
+            ) {
+              this.searchResults.style.display = "none";
+            }
+          });
+        }
+
+        handleKeydown(e) {
+          if (!this.currentResults.length) return;
+
+          switch (e.key) {
+            case "ArrowDown":
+              e.preventDefault();
+              this.selectedIndex = Math.min(
+                this.selectedIndex + 1,
+                this.currentResults.length - 1
+              );
+              this.highlightSelected();
+              break;
+            case "ArrowUp":
+              e.preventDefault();
+              this.selectedIndex = Math.max(this.selectedIndex - 1, -1);
+              this.highlightSelected();
+              break;
+            case "Enter":
+              e.preventDefault();
+              if (this.selectedIndex >= 0) {
+                const selectedResult = this.currentResults[this.selectedIndex];
+                if (selectedResult) {
+                  this.handleResultClick(
+                    selectedResult.link,
+                    selectedResult.node
+                  );
+                }
+              } else if (this.currentResults.length > 0) {
+                this.handleResultClick(
+                  this.currentResults[0].link,
+                  this.currentResults[0].node
+                );
+              }
+              break;
+            case "Escape":
+              this.searchResults.style.display = "none";
+              this.searchInput.blur();
+              break;
+          }
+        }
+
+        handleResultClick(link, node) {
+          if (node) {
+            // 如果是页面内容，滚动到对应位置并高亮
+            node.parentElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+            const highlightedText = this.highlightText(
+              node.textContent,
+              this.searchInput.value.trim()
+            );
+            const span = document.createElement("span");
+            span.innerHTML = highlightedText;
+            node.parentNode.replaceChild(span, node);
+          } else if (link !== "#") {
+            // 如果是其他结果，使用原有的导航逻辑
+            const page = link.split("#")[1].split("/")[0];
+            const navItem = document.querySelector(
+              `.nav-links a[href="#${page}"]`
+            );
+            if (navItem) {
+              navItem.click();
+            }
+          }
+
+          this.searchResults.style.display = "none";
+        }
+
+        async handleSearch() {
+          const query = this.searchInput.value.trim();
+          if (!query) {
+            this.searchResults.style.display = "none";
+            this.currentResults = [];
+            this.selectedIndex = -1;
+            return;
+          }
+
+          try {
+            const results = await this.performSearch(query);
+            this.currentResults = results;
+            this.selectedIndex = -1;
+            this.displayResults(results);
+          } catch (error) {
+            this.displayError();
+          }
+        }
+
+        async performSearch(query) {
+          // 获取当前页面的所有可见文本
+          const contentArea = document.getElementById("content-area");
+          const activeContent = contentArea.querySelector(
+            ".page-content.active"
+          );
+          const visibleText = [];
+
+          if (activeContent) {
+            // 递归获取所有文本节点
+            const walker = document.createTreeWalker(
+              activeContent,
+              NodeFilter.SHOW_TEXT,
+              {
+                acceptNode: function (node) {
+                  // 跳过隐藏元素和脚本标签
+                  const style = window.getComputedStyle(node.parentElement);
+                  if (
+                    style.display === "none" ||
+                    style.visibility === "hidden" ||
+                    node.parentElement.tagName === "SCRIPT" ||
+                    node.parentElement.tagName === "STYLE"
+                  ) {
+                    return NodeFilter.FILTER_REJECT;
+                  }
+                  return NodeFilter.FILTER_ACCEPT;
+                },
+              }
+            );
+
+            let node;
+            while ((node = walker.nextNode())) {
+              const text = node.textContent.trim();
+              if (text && text.toLowerCase().includes(query.toLowerCase())) {
+                visibleText.push({
+                  type: "content",
+                  icon: "fa-file-alt",
+                  title:
+                    text.substring(0, 50) + (text.length > 50 ? "..." : ""),
+                  description: "",
+                  link: "#",
+                  node: node,
+                });
+              }
+            }
+          }
+
+          // 合并数据库搜索结果和页面内容
+          const [coursesData, studentsData, eventsData] = await Promise.all([
+            this.searchCourses(query),
+            this.searchStudents(query),
+            this.searchEvents(query),
+          ]);
+
+          return [
+            ...visibleText,
+            ...coursesData,
+            ...studentsData,
+            ...eventsData,
+          ];
+        }
+
+        // 搜索仪表盘内容
+        async searchDashboard(query) {
+          const results = [];
+
+          // 搜索统计数据
+          const { data: statsData, error: statsError } = await supabaseClient
+            .from("dashboard_stats")
+            .select("*")
+            .limit(5);
+
+          if (!statsError && statsData) {
+            results.push({
+              type: "dashboard",
+              icon: "fa-chart-bar",
+              title: "Tableau de bord",
+              description: "Statistiques et aperçu général",
+              link: "#dashboard",
+            });
+          }
+
+          return results;
+        }
+
+        // 搜索个人资料
+        async searchProfile(query) {
+          const {
+            data: { user },
+          } = await supabaseClient.auth.getUser();
+          if (!user) return [];
+
+          const { data: profileData, error } = await supabaseClient
+            .from("users")
+            .select("*")
+            .eq("id", user.id)
+            .single();
+
+          if (error || !profileData) return [];
+
+          return [
+            {
+              type: "profile",
+              icon: "fa-user",
+              title: "Mon Profil",
+              description: `${profileData.first_name} ${profileData.last_name}`,
+              link: "#profile",
+            },
+          ];
+        }
+
+        // 搜索日历事件
+        async searchEvents(query) {
+          const { data: eventsData, error } = await supabaseClient
+            .from("professor_events_manual")
+            .select("*")
+            .or(
+              `title.ilike.%${query}%,description.ilike.%${query}%,location.ilike.%${query}%`
+            )
+            .limit(5);
+
+          if (error) return [];
+
+          return eventsData.map((event) => ({
+            type: "event",
+            icon: "fa-calendar",
+            title: event.title,
+            description: `${event.description || ""} ${
+              event.location ? `- ${event.location}` : ""
+            }`,
+            link: `#calendar/${event.id}`,
+          }));
+        }
+
+        // 搜索课程
+        async searchCourses(query) {
+          const { data, error } = await supabaseClient
+            .from("courses")
+            .select("*")
+            .or(
+              `name.ilike.%${query}%,description.ilike.%${query}%,code.ilike.%${query}%`
+            )
+            .limit(5);
+
+          if (error) return [];
+
+          return data.map((course) => ({
+            type: "course",
+            icon: "fa-book",
+            title: course.name,
+            description: `${course.code || ""} - ${
+              course.description || "Cours"
+            }`,
+            link: `#courses/${course.id}`,
+          }));
+        }
+
+        // 搜索学生
+        async searchStudents(query) {
+          const { data, error } = await supabaseClient
+            .from("users")
+            .select("*")
+            .or(
+              `first_name.ilike.%${query}%,last_name.ilike.%${query}%,email.ilike.%${query}%`
+            )
+            .eq("role", "student")
+            .limit(5);
+
+          if (error) return [];
+
+          return data.map((student) => ({
+            type: "student",
+            icon: "fa-user-graduate",
+            title: `${student.first_name} ${student.last_name}`,
+            description: student.email,
+            link: `#students/${student.id}`,
+          }));
+        }
+
+        // 修改高亮文本的方法
+        highlightText(text, query) {
+          if (!query || !text) return text;
+
+          // 转义特殊字符
+          const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+          // 将查询词分割成单词
+          const words = escapedQuery
+            .split(/\s+/)
+            .filter((word) => word.length > 0);
+
+          let highlightedText = text;
+
+          // 对每个单词进行高亮处理
+          words.forEach((word) => {
+            const regex = new RegExp(`(${word})`, "gi");
+            highlightedText = highlightedText.replace(
+              regex,
+              '<span class="highlight">$1</span>'
+            );
+          });
+
+          return highlightedText;
+        }
+
+        displayResults(results) {
+          const query = this.searchInput.value.trim();
+
+          if (!results.length) {
+            this.searchResults.innerHTML = `
+              <div class="no-results">
+                <i class="fas fa-search"></i>
+                <p>Aucun résultat trouvé</p>
+              </div>
+            `;
+            this.searchResults.style.display = "block";
+            return;
+          }
+
+          const groupedResults = this.groupResultsByType(results);
+          this.searchResults.innerHTML = Object.entries(groupedResults)
+            .map(
+              ([type, items]) => `
+              <div class="search-group">
+                <div class="search-group-header">
+                  ${this.getGroupTitle(type)}
+                </div>
+                ${items
+                  .map(
+                    (result, index) => `
+                  <div class="search-result-item" 
+                       data-index="${this.currentResults.indexOf(result)}" 
+                       onclick="globalSearch.handleResultClick('${
+                         result.link
+                       }', ${
+                      result.node ? 'this.getAttribute("data-node")' : "null"
+                    })"
+                       ${result.node ? `data-node="${result.node}"` : ""}>
+                    <div class="search-result-icon">
+                      <i class="fas ${result.icon}"></i>
+                    </div>
+                    <div class="search-result-content">
+                      <div class="search-result-title">
+                        ${this.highlightText(result.title, query)}
+                      </div>
+                      <div class="search-result-description">
+                        ${this.highlightText(result.description, query)}
+                      </div>
+                    </div>
+                  </div>
+                `
+                  )
+                  .join("")}
+              </div>
+            `
+            )
+            .join("");
+
+          this.searchResults.style.display = "block";
+          this.highlightSelected();
+        }
+
+        highlightSelected() {
+          const items = this.searchResults.querySelectorAll(
+            ".search-result-item"
+          );
+          items.forEach((item) => item.classList.remove("selected"));
+
+          if (this.selectedIndex >= 0 && items[this.selectedIndex]) {
+            items[this.selectedIndex].classList.add("selected");
+            items[this.selectedIndex].scrollIntoView({ block: "nearest" });
+          }
+        }
+
+        groupResultsByType(results) {
+          return results.reduce((groups, result) => {
+            if (!groups[result.type]) {
+              groups[result.type] = [];
+            }
+            groups[result.type].push(result);
+            return groups;
+          }, {});
+        }
+
+        getGroupTitle(type) {
+          const titles = {
+            dashboard: "Tableau de bord",
+            profile: "Profil",
+            event: "Calendrier",
+            course: "Cours",
+            student: "Étudiants",
+          };
+          return titles[type] || type;
+        }
+
+        displayError() {
+          this.searchResults.innerHTML = `
+            <div class="no-results">
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Une erreur s'est produite</p>
+            </div>
+          `;
+          this.searchResults.style.display = "block";
+        }
+
+        // 添加页面内容高亮方法
+        highlightPageContent(query) {
+          if (!query) return;
+
+          const contentArea = document.getElementById("content-area");
+          const textNodes = [];
+
+          // 递归查找所有文本节点
+          function findTextNodes(node) {
+            if (node.nodeType === 3) {
+              // 文本节点
+              textNodes.push(node);
+            } else {
+              for (let child of node.childNodes) {
+                // 跳过脚本标签和样式标签
+                if (child.nodeName !== "SCRIPT" && child.nodeName !== "STYLE") {
+                  findTextNodes(child);
+                }
+              }
+            }
+          }
+
+          findTextNodes(contentArea);
+
+          // 对每个文本节点应用高亮
+          textNodes.forEach((node) => {
+            const text = node.textContent;
+            if (text.trim()) {
+              const highlightedText = this.highlightText(text, query);
+              if (highlightedText !== text) {
+                const span = document.createElement("span");
+                span.innerHTML = highlightedText;
+                node.parentNode.replaceChild(span, node);
+              }
+            }
+          });
+        }
+      }
+
+      // 初始化搜索功能并使其全局可用
+      document.addEventListener("DOMContentLoaded", () => {
+        window.globalSearch = new GlobalSearch();
+      });
+
+      // 页面加载处理
+      document.addEventListener("pageChange", async (e) => {
+        const { pageId, itemId } = e.detail;
+
+        // 获取当前搜索词
+        const searchInput = document.getElementById("globalSearch");
+        const query = searchInput?.value?.trim();
+
+        // 隐藏所有页面
+        document.querySelectorAll(".page-content").forEach((el) => {
+          el.classList.remove("active");
+        });
+
+        // 获取目标页面
+        const targetPage = document.getElementById(pageId);
+        if (!targetPage) return;
+
+        // 显示目标页面
+        targetPage.classList.add("active");
+
+        // 加载页面内容
+        try {
+          // 如果页面内容为空，加载HTML
+          if (!targetPage.children.length) {
+            const response = await fetch(`../HTML/${pageId}.html`);
+            if (!response.ok)
+              throw new Error(`HTTP error! status: ${response.status}`);
+            const html = await response.text();
+            targetPage.innerHTML = html;
+          }
+
+          // 加载并执行对应的JavaScript模块
+          switch (pageId) {
+            case "0_table_board":
+              const dashboardModule = await import("../JS/0_table_board.js");
+              await dashboardModule.initialize();
+              break;
+            case "1_profil":
+              const profileModule = await import("../JS/1_profil.js");
+              await profileModule.initialize();
+              break;
+            case "2_calendrier":
+              const calendarModule = await import("../JS/2_calendrier.js");
+              await calendarModule.initialize(itemId);
+              break;
+            case "3_cours":
+              const coursesModule = await import("../JS/3_cours.js");
+              await coursesModule.initialize(itemId);
+              break;
+            case "4_gestion_etudiant":
+              const studentsModule = await import("../JS/4_gestion_etudiant.js");
+              await studentsModule.initialize(itemId);
+              break;
+          }
+
+          // 在页面内容加载完成后应用高亮
+          if (query) {
+            setTimeout(() => {
+              window.globalSearch.highlightPageContent(query);
+            }, 500);
+          }
+        } catch (error) {
+          console.error("Error loading page:", error);
+        }
+      });
+    </script>
+
+    <script type="module" src="../JS/Prof_index.js"></script>
+  </body>
+</html>

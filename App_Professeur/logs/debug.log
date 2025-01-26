@@ -1,0 +1,1005 @@
+[2025-01-09 17:28:45] Initializing Prof_index.php
+[2025-01-09 17:28:45] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:28:45] Avatar upload attempt Data: {"name":"SOFTCI~1.JPG","full_path":"SOFTCI~1.JPG","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\php914E.tmp","error":0,"size":549997}
+[2025-01-09 17:28:45] File uploaded successfully Data: {"path":"..\/Image\/135_1736440125_SOFTCI~1.JPG"}
+[2025-01-09 17:28:45] Error occurred Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'avatar_url' inconnu dans field list"}
+[2025-01-09 17:30:37] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:30:37] Avatar upload attempt Data: {"name":"SOFTCI~1.JPG","full_path":"SOFTCI~1.JPG","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\php44EA.tmp","error":0,"size":549997}
+[2025-01-09 17:30:37] File uploaded successfully Data: {"path":"..\/Image\/135_1736440237_SOFTCI~1.JPG"}
+[2025-01-09 17:30:37] Error occurred Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'avatar_url' inconnu dans field list"}
+[2025-01-09 17:37:58] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:37:58] Avatar upload attempt Data: {"name":"SOFTCI~1.JPG","full_path":"SOFTCI~1.JPG","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\php36C.tmp","error":0,"size":549997}
+[2025-01-09 17:37:58] File uploaded successfully Data: {"path":"..\/Image\/135_1736440678_SOFTCI~1.JPG"}
+[2025-01-09 17:37:58] Retrieved old avatar path Data: {"old_avatar":"Image\/defaut-avatar.png"}
+[2025-01-09 17:37:59] Avatar update completed successfully Data: {"new_avatar_url":"Image\/135_1736440678_SOFTCI~1.JPG"}
+[2025-01-09 17:39:52] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:39:52] Fetching user profile data
+[2025-01-09 17:39:52] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:39:54] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:39:54] Fetching user profile data
+[2025-01-09 17:39:54] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:39:58] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:39:58] Avatar upload attempt Data: {"name":"1.jpg","full_path":"1.jpg","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\phpD4C2.tmp","error":0,"size":326392}
+[2025-01-09 17:39:58] File uploaded successfully Data: {"path":"..\/Image\/135_1736440798_1.jpg"}
+[2025-01-09 17:39:58] Retrieved old avatar path Data: {"old_avatar":"Image\/135_1736440678_SOFTCI~1.JPG"}
+[2025-01-09 17:39:58] Old avatar deleted
+[2025-01-09 17:39:58] Avatar update completed successfully Data: {"new_avatar_url":"Image\/135_1736440798_1.jpg"}
+[2025-01-09 17:40:00] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:40:00] Avatar upload attempt Data: {"name":"SOFTCI~1.JPG","full_path":"SOFTCI~1.JPG","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\phpDFEE.tmp","error":0,"size":549997}
+[2025-01-09 17:40:00] File uploaded successfully Data: {"path":"..\/Image\/135_1736440800_SOFTCI~1.JPG"}
+[2025-01-09 17:40:00] Retrieved old avatar path Data: {"old_avatar":"Image\/135_1736440798_1.jpg"}
+[2025-01-09 17:40:00] Old avatar deleted
+[2025-01-09 17:40:00] Avatar update completed successfully Data: {"new_avatar_url":"Image\/135_1736440800_SOFTCI~1.JPG"}
+[2025-01-09 17:40:31] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:40:31] Fetching user profile data
+[2025-01-09 17:40:31] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:41:33] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:41:33] Fetching user profile data
+[2025-01-09 17:41:33] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:43:19] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:43:19] Fetching user profile data
+[2025-01-09 17:43:19] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:43:37] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:43:37] Fetching user profile data
+[2025-01-09 17:43:37] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:47:35] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:47:35] Fetching user profile data
+[2025-01-09 17:47:35] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:48:01] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:48:01] Fetching user profile data
+[2025-01-09 17:48:01] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:48:04] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:48:04] Avatar upload attempt Data: {"name":"SOFTCI~1.JPG","full_path":"SOFTCI~1.JPG","type":"image\/jpeg","tmp_name":"C:\\wamp64\\tmp\\php4212.tmp","error":0,"size":549997}
+[2025-01-09 17:48:04] File uploaded successfully Data: {"path":"..\/Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 17:48:04] Retrieved old avatar path Data: {"old_avatar":"Image\/135_1736440800_SOFTCI~1.JPG"}
+[2025-01-09 17:48:04] Old avatar deleted
+[2025-01-09 17:48:04] Avatar update completed successfully Data: {"new_avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 17:48:34] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:48:34] Fetching user profile data
+[2025-01-09 17:48:34] Error fetching profile data Data: {"error":"SQLSTATE[42S22]: Column not found: 1054 Champ 'display_name' inconnu dans field list"}
+[2025-01-09 17:50:19] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:50:19] Fetching user profile data
+[2025-01-09 17:50:19] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 17:50:19] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 17:57:26] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:57:26] Fetching user profile data
+[2025-01-09 17:57:26] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 17:57:26] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 17:58:44] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:58:44] Fetching user profile data
+[2025-01-09 17:58:44] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 17:58:44] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 17:59:20] User accessed profile page Data: {"user_id":135}
+[2025-01-09 17:59:20] Fetching user profile data
+[2025-01-09 17:59:20] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 17:59:20] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:00:26] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:00:26] Fetching user profile data
+[2025-01-09 18:00:26] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:00:26] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:00:58] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:00:58] Fetching user profile data
+[2025-01-09 18:00:58] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:00:58] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:04:11] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:04:11] Fetching user profile data
+[2025-01-09 18:04:11] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:04:11] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:07:00] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:07:00] Fetching user profile data
+[2025-01-09 18:07:00] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:07:00] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:10:07] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:10:07] Fetching user profile data
+[2025-01-09 18:10:07] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:10:07] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:10:54] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:10:54] Fetching user profile data
+[2025-01-09 18:10:54] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:10:54] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:12:03] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:12:03] Fetching user profile data
+[2025-01-09 18:12:03] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:12:03] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:18:03] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:18:03] Fetching user profile data
+[2025-01-09 18:18:03] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:18:03] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:20:15] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:20:15] Fetching user profile data
+[2025-01-09 18:20:15] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:20:15] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:21:24] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:21:24] Fetching user profile data
+[2025-01-09 18:21:24] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:21:24] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:23:36] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:23:36] Fetching user profile data
+[2025-01-09 18:23:36] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:23:36] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:25:22] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:25:22] Fetching user profile data
+[2025-01-09 18:25:22] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:25:22] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:27:26] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:27:26] Fetching user profile data
+[2025-01-09 18:27:26] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:27:26] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:29:04] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:29:04] Fetching user profile data
+[2025-01-09 18:29:04] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:29:04] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:29:53] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:29:53] Fetching user profile data
+[2025-01-09 18:29:53] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:29:53] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:31:33] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:31:33] Fetching user profile data
+[2025-01-09 18:31:33] Checking avatar file Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:31:33] User profile data retrieved Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:35:28] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:35:28] 开始获取用户资料数据
+[2025-01-09 18:35:28] 数据库连接成功
+[2025-01-09 18:35:28] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:35:28] SQL准备成功
+[2025-01-09 18:35:28] SQL执行成功
+[2025-01-09 18:35:28] 成功获取用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:35:28] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:35:28] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:35:31] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:35:31] 开始获取用户资料数据
+[2025-01-09 18:35:31] 数据库连接成功
+[2025-01-09 18:35:31] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:35:31] SQL准备成功
+[2025-01-09 18:35:31] SQL执行成功
+[2025-01-09 18:35:31] 成功获取用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:35:31] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:35:31] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:36:32] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:36:32] 开始获取用户资料数据
+[2025-01-09 18:36:32] 数据库连接成功
+[2025-01-09 18:36:32] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:36:32] SQL准备成功
+[2025-01-09 18:36:32] SQL执行成功
+[2025-01-09 18:36:32] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:32] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:32] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:36:32] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:36:33] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:36:33] 开始获取用户资料数据
+[2025-01-09 18:36:33] 数据库连接成功
+[2025-01-09 18:36:33] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:36:33] SQL准备成功
+[2025-01-09 18:36:33] SQL执行成功
+[2025-01-09 18:36:33] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:33] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:33] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:36:33] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:36:56] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:36:56] 开始获取用户资料数据
+[2025-01-09 18:36:56] 数据库连接成功
+[2025-01-09 18:36:56] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:36:56] SQL准备成功
+[2025-01-09 18:36:56] SQL执行成功
+[2025-01-09 18:36:56] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:56] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:56] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:36:56] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:36:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:36:57] 开始获取用户资料数据
+[2025-01-09 18:36:57] 数据库连接成功
+[2025-01-09 18:36:57] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:36:57] SQL准备成功
+[2025-01-09 18:36:57] SQL执行成功
+[2025-01-09 18:36:57] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:57] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:36:57] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:36:57] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:37:50] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:37:50] 开始获取用户资料数据
+[2025-01-09 18:37:50] 数据库连接成功
+[2025-01-09 18:37:50] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:37:50] SQL准备成功
+[2025-01-09 18:37:50] SQL执行成功
+[2025-01-09 18:37:50] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:37:50] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:37:50] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:37:50] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:37:51] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:37:51] 开始获取用户资料数据
+[2025-01-09 18:37:51] 数据库连接成功
+[2025-01-09 18:37:51] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:37:51] SQL准备成功
+[2025-01-09 18:37:51] SQL执行成功
+[2025-01-09 18:37:51] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:37:51] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:37:51] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:37:51] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:38:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:38:57] 开始获取用户资料数据
+[2025-01-09 18:38:57] 数据库连接成功
+[2025-01-09 18:38:57] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:38:57] SQL准备成功
+[2025-01-09 18:38:57] SQL执行成功
+[2025-01-09 18:38:57] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:38:57] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:38:57] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:38:57] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:38:58] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:38:58] 开始获取用户资料数据
+[2025-01-09 18:38:58] 数据库连接成功
+[2025-01-09 18:38:58] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:38:58] SQL准备成功
+[2025-01-09 18:38:58] SQL执行成功
+[2025-01-09 18:38:58] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:38:58] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:38:58] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:38:58] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:07] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:07] 开始获取用户资料数据
+[2025-01-09 18:59:07] 数据库连接成功
+[2025-01-09 18:59:07] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:07] SQL准备成功
+[2025-01-09 18:59:07] SQL执行成功
+[2025-01-09 18:59:07] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:07] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:07] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:07] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:08] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:08] 开始获取用户资料数据
+[2025-01-09 18:59:08] 数据库连接成功
+[2025-01-09 18:59:08] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:08] SQL准备成功
+[2025-01-09 18:59:08] SQL执行成功
+[2025-01-09 18:59:08] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:08] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:08] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:08] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:08] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:08] 获取用户专业列表
+[2025-01-09 18:59:08] 用户专业列表 Data: {"specialities":[]}
+[2025-01-09 18:59:10] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:10] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["info"]}
+[2025-01-09 18:59:10] 专业更新成功 Data: {"specialities":["info"]}
+[2025-01-09 18:59:10] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:10] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["info","meca"]}
+[2025-01-09 18:59:10] 专业更新成功 Data: {"specialities":["info","meca"]}
+[2025-01-09 18:59:13] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:13] 开始获取用户资料数据
+[2025-01-09 18:59:13] 数据库连接成功
+[2025-01-09 18:59:13] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:13] SQL准备成功
+[2025-01-09 18:59:13] SQL执行成功
+[2025-01-09 18:59:13] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:13] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:13] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:13] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:13] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:13] 开始获取用户资料数据
+[2025-01-09 18:59:13] 数据库连接成功
+[2025-01-09 18:59:13] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:13] SQL准备成功
+[2025-01-09 18:59:13] SQL执行成功
+[2025-01-09 18:59:13] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:13] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:13] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:13] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:13] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:13] 获取用户专业列表
+[2025-01-09 18:59:13] 用户专业列表 Data: {"specialities":["info","meca"]}
+[2025-01-09 18:59:16] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:16] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["info","meca","en"]}
+[2025-01-09 18:59:16] 专业更新成功 Data: {"specialities":["info","meca","en"]}
+[2025-01-09 18:59:17] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:17] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["info","meca","en","es"]}
+[2025-01-09 18:59:17] 专业更新成功 Data: {"specialities":["info","meca","en","es"]}
+[2025-01-09 18:59:18] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:18] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["info","meca","en","es","geo"]}
+[2025-01-09 18:59:18] 专业更新成功 Data: {"specialities":["info","meca","en","es","geo"]}
+[2025-01-09 18:59:20] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:20] 开始获取用户资料数据
+[2025-01-09 18:59:20] 数据库连接成功
+[2025-01-09 18:59:20] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:20] SQL准备成功
+[2025-01-09 18:59:20] SQL执行成功
+[2025-01-09 18:59:20] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:20] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:20] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:20] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:22] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:22] 开始获取用户资料数据
+[2025-01-09 18:59:22] 数据库连接成功
+[2025-01-09 18:59:22] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 18:59:22] SQL准备成功
+[2025-01-09 18:59:22] SQL执行成功
+[2025-01-09 18:59:22] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:22] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 18:59:22] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 18:59:22] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 18:59:22] User accessed profile page Data: {"user_id":135}
+[2025-01-09 18:59:22] 获取用户专业列表
+[2025-01-09 18:59:22] 用户专业列表 Data: {"specialities":["en","es","geo","info","meca"]}
+[2025-01-09 19:01:38] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:01:38] 开始获取用户资料数据
+[2025-01-09 19:01:38] 数据库连接成功
+[2025-01-09 19:01:38] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:01:38] SQL准备成功
+[2025-01-09 19:01:38] SQL执行成功
+[2025-01-09 19:01:38] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:01:38] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:01:38] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:01:38] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:01:38] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:01:38] 获取用户专业列表
+[2025-01-09 19:01:38] 用户专业列表 Data: {"specialities":["en","es","geo","info","meca"]}
+[2025-01-09 19:01:45] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:01:45] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:01:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:01:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:21] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:21] 开始获取用户资料数据
+[2025-01-09 19:03:21] 数据库连接成功
+[2025-01-09 19:03:21] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:03:21] SQL准备成功
+[2025-01-09 19:03:21] SQL执行成功
+[2025-01-09 19:03:21] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:21] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:21] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:03:21] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:03:23] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:23] 开始获取用户资料数据
+[2025-01-09 19:03:23] 数据库连接成功
+[2025-01-09 19:03:23] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:03:23] SQL准备成功
+[2025-01-09 19:03:23] SQL执行成功
+[2025-01-09 19:03:23] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:23] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:23] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:03:23] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:03:23] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:23] 获取用户专业列表
+[2025-01-09 19:03:23] 用户专业列表 Data: {"specialities":["en","es","geo","info","meca"]}
+[2025-01-09 19:03:25] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:25] 开始获取用户资料数据
+[2025-01-09 19:03:25] 数据库连接成功
+[2025-01-09 19:03:25] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:03:25] SQL准备成功
+[2025-01-09 19:03:25] SQL执行成功
+[2025-01-09 19:03:25] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:25] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:25] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:03:25] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:03:25] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:25] 获取用户专业列表
+[2025-01-09 19:03:25] 用户专业列表 Data: {"specialities":["en","es","geo","info","meca"]}
+[2025-01-09 19:03:27] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:27] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["en","es","geo","info","meca","custom_1"]}
+[2025-01-09 19:03:27] 专业更新成功 Data: {"specialities":["en","es","geo","info","meca","custom_1"]}
+[2025-01-09 19:03:51] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:51] 开始获取用户资料数据
+[2025-01-09 19:03:51] 数据库连接成功
+[2025-01-09 19:03:51] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:03:51] SQL准备成功
+[2025-01-09 19:03:51] SQL执行成功
+[2025-01-09 19:03:51] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:51] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:51] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:03:51] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:03:52] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:52] 开始获取用户资料数据
+[2025-01-09 19:03:52] 数据库连接成功
+[2025-01-09 19:03:52] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:03:52] SQL准备成功
+[2025-01-09 19:03:52] SQL执行成功
+[2025-01-09 19:03:52] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:52] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:03:52] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:03:52] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:03:52] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:03:52] 获取用户专业列表
+[2025-01-09 19:03:52] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 19:04:20] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:04:20] 开始获取用户资料数据
+[2025-01-09 19:04:20] 数据库连接成功
+[2025-01-09 19:04:20] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:04:20] SQL准备成功
+[2025-01-09 19:04:20] SQL执行成功
+[2025-01-09 19:04:20] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:04:20] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:04:20] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:04:20] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:04:24] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:04:24] 开始获取用户资料数据
+[2025-01-09 19:04:24] 数据库连接成功
+[2025-01-09 19:04:24] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:04:24] SQL准备成功
+[2025-01-09 19:04:24] SQL执行成功
+[2025-01-09 19:04:24] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:04:24] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:04:24] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:04:24] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:04:24] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:04:24] 获取用户专业列表
+[2025-01-09 19:04:24] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 19:08:46] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:08:46] 开始获取用户资料数据
+[2025-01-09 19:08:46] 数据库连接成功
+[2025-01-09 19:08:46] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:08:46] SQL准备成功
+[2025-01-09 19:08:46] SQL执行成功
+[2025-01-09 19:08:46] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:08:46] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:08:46] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:08:46] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:08:47] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:08:47] 开始获取用户资料数据
+[2025-01-09 19:08:47] 数据库连接成功
+[2025-01-09 19:08:47] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:08:47] SQL准备成功
+[2025-01-09 19:08:47] SQL执行成功
+[2025-01-09 19:08:47] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:08:47] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:08:47] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:08:47] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:08:47] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:08:47] 获取用户专业列表
+[2025-01-09 19:08:47] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 19:09:46] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:09:46] 开始获取用户资料数据
+[2025-01-09 19:09:46] 数据库连接成功
+[2025-01-09 19:09:46] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:09:46] SQL准备成功
+[2025-01-09 19:09:46] SQL执行成功
+[2025-01-09 19:09:46] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:09:46] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:09:46] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:09:46] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:09:48] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:09:48] 开始获取用户资料数据
+[2025-01-09 19:09:48] 数据库连接成功
+[2025-01-09 19:09:48] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:09:48] SQL准备成功
+[2025-01-09 19:09:48] SQL执行成功
+[2025-01-09 19:09:48] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:09:48] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:09:48] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:09:48] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:09:48] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:09:48] 获取用户专业列表
+[2025-01-09 19:09:48] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 19:10:29] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:10:29] 开始获取用户资料数据
+[2025-01-09 19:10:29] 数据库连接成功
+[2025-01-09 19:10:29] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:10:29] SQL准备成功
+[2025-01-09 19:10:29] SQL执行成功
+[2025-01-09 19:10:29] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:10:29] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:10:29] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:10:29] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:10:35] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:10:35] 开始获取用户资料数据
+[2025-01-09 19:10:35] 数据库连接成功
+[2025-01-09 19:10:35] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:10:35] SQL准备成功
+[2025-01-09 19:10:35] SQL执行成功
+[2025-01-09 19:10:35] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:10:35] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:10:35] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:10:35] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:10:35] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:10:35] 获取用户专业列表
+[2025-01-09 19:10:35] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 19:48:39] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:48:39] 开始获取用户资料数据
+[2025-01-09 19:48:39] 数据库连接成功
+[2025-01-09 19:48:39] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:48:39] SQL准备成功
+[2025-01-09 19:48:39] SQL执行成功
+[2025-01-09 19:48:39] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:48:39] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:48:39] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:48:39] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:59:06] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:59:06] 开始获取用户资料数据
+[2025-01-09 19:59:06] 数据库连接成功
+[2025-01-09 19:59:06] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:59:06] SQL准备成功
+[2025-01-09 19:59:06] SQL执行成功
+[2025-01-09 19:59:06] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:59:06] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:59:06] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:59:06] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:59:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:59:57] 开始获取用户资料数据
+[2025-01-09 19:59:57] 数据库连接成功
+[2025-01-09 19:59:57] 用户ID有效: Data: {"user_id":135}
+[2025-01-09 19:59:57] SQL准备成功
+[2025-01-09 19:59:57] SQL执行成功
+[2025-01-09 19:59:57] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:59:57] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-09 19:59:57] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-09 19:59:57] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-09 19:59:57] User accessed profile page Data: {"user_id":135}
+[2025-01-09 19:59:57] 获取用户专业列表
+[2025-01-09 19:59:57] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-09 21:10:38] Unauthorized access attempt
+[2025-01-09 21:18:46] Unauthorized access attempt
+[2025-01-09 21:19:54] Unauthorized access attempt
+[2025-01-09 21:19:59] Unauthorized access attempt
+[2025-01-09 21:39:00] Unauthorized access attempt
+[2025-01-10 13:06:51] Unauthorized access attempt
+[2025-01-10 13:06:53] Unauthorized access attempt
+[2025-01-10 13:06:55] Unauthorized access attempt
+[2025-01-10 13:07:19] Unauthorized access attempt
+[2025-01-10 13:07:24] Unauthorized access attempt
+[2025-01-10 13:07:31] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:07:31] 开始获取用户资料数据
+[2025-01-10 13:07:31] 数据库连接成功
+[2025-01-10 13:07:31] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:07:31] SQL准备成功
+[2025-01-10 13:07:31] SQL执行成功
+[2025-01-10 13:07:31] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:31] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:31] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:07:31] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:07:33] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:07:33] 开始获取用户资料数据
+[2025-01-10 13:07:33] 数据库连接成功
+[2025-01-10 13:07:33] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:07:33] SQL准备成功
+[2025-01-10 13:07:33] SQL执行成功
+[2025-01-10 13:07:33] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:33] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:33] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:07:33] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:07:33] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:07:33] 获取用户专业列表
+[2025-01-10 13:07:33] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:07:37] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:07:37] 开始获取用户资料数据
+[2025-01-10 13:07:37] 数据库连接成功
+[2025-01-10 13:07:37] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:07:37] SQL准备成功
+[2025-01-10 13:07:37] SQL执行成功
+[2025-01-10 13:07:37] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:37] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:07:37] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:07:37] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:07:37] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:07:37] 获取用户专业列表
+[2025-01-10 13:07:37] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:12] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:12] 开始获取用户资料数据
+[2025-01-10 13:08:13] 数据库连接成功
+[2025-01-10 13:08:13] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:13] SQL准备成功
+[2025-01-10 13:08:13] SQL执行成功
+[2025-01-10 13:08:13] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:13] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:13] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:13] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:13] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:13] 获取用户专业列表
+[2025-01-10 13:08:13] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:14] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:14] 开始获取用户资料数据
+[2025-01-10 13:08:14] 数据库连接成功
+[2025-01-10 13:08:14] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:14] SQL准备成功
+[2025-01-10 13:08:14] SQL执行成功
+[2025-01-10 13:08:14] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:14] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:14] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:14] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:14] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:14] 获取用户专业列表
+[2025-01-10 13:08:14] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:15] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:15] 开始获取用户资料数据
+[2025-01-10 13:08:15] 数据库连接成功
+[2025-01-10 13:08:15] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:15] SQL准备成功
+[2025-01-10 13:08:15] SQL执行成功
+[2025-01-10 13:08:15] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:15] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:15] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:15] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:15] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:15] 获取用户专业列表
+[2025-01-10 13:08:15] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:16] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:16] 开始获取用户资料数据
+[2025-01-10 13:08:16] 数据库连接成功
+[2025-01-10 13:08:16] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:16] SQL准备成功
+[2025-01-10 13:08:16] SQL执行成功
+[2025-01-10 13:08:16] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:16] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:16] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:16] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:16] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:16] 获取用户专业列表
+[2025-01-10 13:08:16] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:20] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:20] 开始获取用户资料数据
+[2025-01-10 13:08:20] 数据库连接成功
+[2025-01-10 13:08:20] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:20] SQL准备成功
+[2025-01-10 13:08:20] SQL执行成功
+[2025-01-10 13:08:20] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:20] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:20] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:20] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:20] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:20] 获取用户专业列表
+[2025-01-10 13:08:20] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:22] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:22] 开始获取用户资料数据
+[2025-01-10 13:08:22] 数据库连接成功
+[2025-01-10 13:08:22] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:22] SQL准备成功
+[2025-01-10 13:08:22] SQL执行成功
+[2025-01-10 13:08:22] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:22] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:22] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:22] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:22] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:22] 获取用户专业列表
+[2025-01-10 13:08:22] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:24] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:24] 开始获取用户资料数据
+[2025-01-10 13:08:24] 数据库连接成功
+[2025-01-10 13:08:24] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:24] SQL准备成功
+[2025-01-10 13:08:24] SQL执行成功
+[2025-01-10 13:08:24] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:24] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:24] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:24] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:24] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:24] 获取用户专业列表
+[2025-01-10 13:08:24] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:27] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:27] 开始获取用户资料数据
+[2025-01-10 13:08:27] 数据库连接成功
+[2025-01-10 13:08:27] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:27] SQL准备成功
+[2025-01-10 13:08:27] SQL执行成功
+[2025-01-10 13:08:27] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:27] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:27] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:27] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:27] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:27] 获取用户专业列表
+[2025-01-10 13:08:27] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:35] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:35] 开始获取用户资料数据
+[2025-01-10 13:08:35] 数据库连接成功
+[2025-01-10 13:08:35] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:35] SQL准备成功
+[2025-01-10 13:08:35] SQL执行成功
+[2025-01-10 13:08:35] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:35] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:35] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:35] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:35] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:35] 获取用户专业列表
+[2025-01-10 13:08:35] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:38] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:38] 开始获取用户资料数据
+[2025-01-10 13:08:38] 数据库连接成功
+[2025-01-10 13:08:38] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:38] SQL准备成功
+[2025-01-10 13:08:38] SQL执行成功
+[2025-01-10 13:08:38] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:38] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:38] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:38] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:38] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:38] 获取用户专业列表
+[2025-01-10 13:08:38] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:39] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:39] 开始获取用户资料数据
+[2025-01-10 13:08:39] 数据库连接成功
+[2025-01-10 13:08:39] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:39] SQL准备成功
+[2025-01-10 13:08:39] SQL执行成功
+[2025-01-10 13:08:39] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:39] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:39] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:39] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:39] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:39] 获取用户专业列表
+[2025-01-10 13:08:39] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:46] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:46] 开始获取用户资料数据
+[2025-01-10 13:08:46] 数据库连接成功
+[2025-01-10 13:08:46] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:46] SQL准备成功
+[2025-01-10 13:08:46] SQL执行成功
+[2025-01-10 13:08:46] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:46] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:46] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:46] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:46] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:46] 获取用户专业列表
+[2025-01-10 13:08:46] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:08:47] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:47] 开始获取用户资料数据
+[2025-01-10 13:08:47] 数据库连接成功
+[2025-01-10 13:08:47] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:08:47] SQL准备成功
+[2025-01-10 13:08:47] SQL执行成功
+[2025-01-10 13:08:47] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:47] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:08:47] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:08:47] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:08:47] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:08:47] 获取用户专业列表
+[2025-01-10 13:08:47] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:09:00] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:00] 开始获取用户资料数据
+[2025-01-10 13:09:00] 数据库连接成功
+[2025-01-10 13:09:00] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:00] SQL准备成功
+[2025-01-10 13:09:00] SQL执行成功
+[2025-01-10 13:09:00] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:00] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:00] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:00] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:00] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:00] 获取用户专业列表
+[2025-01-10 13:09:00] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:09:45] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:45] 开始获取用户资料数据
+[2025-01-10 13:09:45] 数据库连接成功
+[2025-01-10 13:09:45] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:45] SQL准备成功
+[2025-01-10 13:09:45] SQL执行成功
+[2025-01-10 13:09:45] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:45] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:45] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:45] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:45] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:45] 获取用户专业列表
+[2025-01-10 13:09:45] 用户专业列表 Data: {"specialities":["custom_1","en","es","geo","info","meca"]}
+[2025-01-10 13:09:48] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:48] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["en","es","geo","info","meca","bio"]}
+[2025-01-10 13:09:48] 专业更新成功 Data: {"specialities":["en","es","geo","info","meca","bio"]}
+[2025-01-10 13:09:54] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:54] 开始获取用户资料数据
+[2025-01-10 13:09:54] 数据库连接成功
+[2025-01-10 13:09:54] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:54] SQL准备成功
+[2025-01-10 13:09:54] SQL执行成功
+[2025-01-10 13:09:54] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:54] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:54] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:54] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:54] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:54] 获取用户专业列表
+[2025-01-10 13:09:54] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:09:57] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:57] 开始获取用户资料数据
+[2025-01-10 13:09:57] 数据库连接成功
+[2025-01-10 13:09:57] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:57] SQL准备成功
+[2025-01-10 13:09:57] SQL执行成功
+[2025-01-10 13:09:57] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:57] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:57] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:57] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:57] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:57] 获取用户专业列表
+[2025-01-10 13:09:57] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:09:58] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:58] 开始获取用户资料数据
+[2025-01-10 13:09:58] 数据库连接成功
+[2025-01-10 13:09:58] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:58] SQL准备成功
+[2025-01-10 13:09:58] SQL执行成功
+[2025-01-10 13:09:58] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:58] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:58] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:58] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:58] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:58] 获取用户专业列表
+[2025-01-10 13:09:58] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:09:58] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:58] 开始获取用户资料数据
+[2025-01-10 13:09:58] 数据库连接成功
+[2025-01-10 13:09:58] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:58] SQL准备成功
+[2025-01-10 13:09:58] SQL执行成功
+[2025-01-10 13:09:58] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:58] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:58] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:09:58] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:09:58] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:58] 获取用户专业列表
+[2025-01-10 13:09:58] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:09:59] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:09:59] 开始获取用户资料数据
+[2025-01-10 13:09:59] 数据库连接成功
+[2025-01-10 13:09:59] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:09:59] SQL准备成功
+[2025-01-10 13:09:59] SQL执行成功
+[2025-01-10 13:09:59] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:59] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:09:59] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:10:00] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:10:00] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:10:00] 获取用户专业列表
+[2025-01-10 13:10:00] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:10:00] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:10:00] 开始获取用户资料数据
+[2025-01-10 13:10:00] 数据库连接成功
+[2025-01-10 13:10:00] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:10:00] SQL准备成功
+[2025-01-10 13:10:00] SQL执行成功
+[2025-01-10 13:10:00] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:10:00] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:10:00] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:10:00] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:10:00] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:10:00] 获取用户专业列表
+[2025-01-10 13:10:00] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:10:03] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:10:03] 开始获取用户资料数据
+[2025-01-10 13:10:03] 数据库连接成功
+[2025-01-10 13:10:03] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:10:03] SQL准备成功
+[2025-01-10 13:10:03] SQL执行成功
+[2025-01-10 13:10:03] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:10:03] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:10:03] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:10:03] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:10:03] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:10:03] 获取用户专业列表
+[2025-01-10 13:10:03] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:47:47] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:47] 开始获取用户资料数据
+[2025-01-10 13:47:47] 数据库连接成功
+[2025-01-10 13:47:47] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:47:47] SQL准备成功
+[2025-01-10 13:47:47] SQL执行成功
+[2025-01-10 13:47:47] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:47] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:47] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:47:47] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:47:47] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:47] 获取用户专业列表
+[2025-01-10 13:47:47] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:47:53] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:53] 开始获取用户资料数据
+[2025-01-10 13:47:53] 数据库连接成功
+[2025-01-10 13:47:53] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:47:53] SQL准备成功
+[2025-01-10 13:47:53] SQL执行成功
+[2025-01-10 13:47:53] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:53] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:53] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:47:53] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:47:53] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:53] 获取用户专业列表
+[2025-01-10 13:47:53] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:47:54] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:54] 开始获取用户资料数据
+[2025-01-10 13:47:54] 数据库连接成功
+[2025-01-10 13:47:54] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:47:54] SQL准备成功
+[2025-01-10 13:47:54] SQL执行成功
+[2025-01-10 13:47:54] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:54] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:47:54] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:47:54] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:47:54] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:47:54] 获取用户专业列表
+[2025-01-10 13:47:54] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-10 13:48:42] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:48:42] 开始获取用户资料数据
+[2025-01-10 13:48:42] 数据库连接成功
+[2025-01-10 13:48:42] 用户ID有效: Data: {"user_id":135}
+[2025-01-10 13:48:42] SQL准备成功
+[2025-01-10 13:48:42] SQL执行成功
+[2025-01-10 13:48:42] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:48:42] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-10 13:48:42] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-10 13:48:42] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-10 13:48:42] User accessed profile page Data: {"user_id":135}
+[2025-01-10 13:48:42] 获取用户专业列表
+[2025-01-10 13:48:42] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-13 01:11:33] Unauthorized access attempt
+[2025-01-13 01:11:34] Unauthorized access attempt
+[2025-01-13 01:11:35] Unauthorized access attempt
+[2025-01-13 01:11:36] Unauthorized access attempt
+[2025-01-13 01:11:40] Unauthorized access attempt
+[2025-01-13 01:11:44] User accessed profile page Data: {"user_id":135}
+[2025-01-13 01:11:44] 开始获取用户资料数据
+[2025-01-13 01:11:44] 数据库连接成功
+[2025-01-13 01:11:44] 用户ID有效: Data: {"user_id":135}
+[2025-01-13 01:11:44] SQL准备成功
+[2025-01-13 01:11:44] SQL执行成功
+[2025-01-13 01:11:44] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 01:11:44] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 01:11:44] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-13 01:11:44] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-13 01:11:46] User accessed profile page Data: {"user_id":135}
+[2025-01-13 01:11:46] 开始获取用户资料数据
+[2025-01-13 01:11:46] 数据库连接成功
+[2025-01-13 01:11:46] 用户ID有效: Data: {"user_id":135}
+[2025-01-13 01:11:46] SQL准备成功
+[2025-01-13 01:11:46] SQL执行成功
+[2025-01-13 01:11:46] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 01:11:46] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 01:11:46] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-13 01:11:46] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-13 01:11:46] User accessed profile page Data: {"user_id":135}
+[2025-01-13 01:11:46] 获取用户专业列表
+[2025-01-13 01:11:46] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-13 03:21:44] User accessed profile page Data: {"user_id":135}
+[2025-01-13 03:21:44] 开始获取用户资料数据
+[2025-01-13 03:21:44] 数据库连接成功
+[2025-01-13 03:21:44] 用户ID有效: Data: {"user_id":135}
+[2025-01-13 03:21:44] SQL准备成功
+[2025-01-13 03:21:44] SQL执行成功
+[2025-01-13 03:21:44] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:44] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:44] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-13 03:21:44] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-13 03:21:51] User accessed profile page Data: {"user_id":135}
+[2025-01-13 03:21:51] 开始获取用户资料数据
+[2025-01-13 03:21:51] 数据库连接成功
+[2025-01-13 03:21:51] 用户ID有效: Data: {"user_id":135}
+[2025-01-13 03:21:51] SQL准备成功
+[2025-01-13 03:21:51] SQL执行成功
+[2025-01-13 03:21:51] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:51] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:51] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-13 03:21:51] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-13 03:21:51] User accessed profile page Data: {"user_id":135}
+[2025-01-13 03:21:51] 获取用户专业列表
+[2025-01-13 03:21:51] 用户专业列表 Data: {"specialities":["bio","en","es","geo","info","meca"]}
+[2025-01-13 03:21:54] User accessed profile page Data: {"user_id":135}
+[2025-01-13 03:21:54] 开始获取用户资料数据
+[2025-01-13 03:21:54] 数据库连接成功
+[2025-01-13 03:21:54] 用户ID有效: Data: {"user_id":135}
+[2025-01-13 03:21:54] SQL准备成功
+[2025-01-13 03:21:54] SQL执行成功
+[2025-01-13 03:21:54] 数据库返回的原始数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":null,"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:54] 处理后的用户数据 Data: {"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}
+[2025-01-13 03:21:54] 检查头像文件 Data: {"avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG","avatar_path":"..\/Image\/135_1736441284_SOFTCI~1.JPG","real_path":"C:\\Users\\chenggong.zhang\\OneDrive - ESTIA\\Bureau\\WEB_Develop\\App_Professeur\\Image\\135_1736441284_SOFTCI~1.JPG","file_exists":true}
+[2025-01-13 03:21:54] 准备返回数据 Data: {"success":true,"user":{"first_name":"chengong","last_name":"df","email":"chenggong.zhang@etu.estia.f","phone":"","avatar_url":"Image\/135_1736441284_SOFTCI~1.JPG"}}
+[2025-01-13 03:22:00] User accessed profile page Data: {"user_id":133}
+[2025-01-13 03:22:00] 开始获取用户资料数据
+[2025-01-13 03:22:00] 数据库连接成功
+[2025-01-13 03:22:00] 用户ID有效: Data: {"user_id":133}
+[2025-01-13 03:22:00] SQL准备成功
+[2025-01-13 03:22:00] SQL执行成功
+[2025-01-13 03:22:00] 数据库返回的原始数据 Data: {"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":null,"avatar_url":"Image\/defaut-avatar.png"}
+[2025-01-13 03:22:00] 处理后的用户数据 Data: {"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":"","avatar_url":"Image\/defaut-avatar.png"}
+[2025-01-13 03:22:00] 检查头像文件 Data: {"avatar_url":"Image\/defaut-avatar.png","avatar_path":"..\/Image\/defaut-avatar.png","real_path":false,"file_exists":false}
+[2025-01-13 03:22:00] 头像文件不存在，使用默认头像
+[2025-01-13 03:22:00] 准备返回数据 Data: {"success":true,"user":{"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":"","avatar_url":"Image\/default-avatar.png"}}
+[2025-01-13 03:22:03] User accessed profile page Data: {"user_id":133}
+[2025-01-13 03:22:03] 开始获取用户资料数据
+[2025-01-13 03:22:03] 数据库连接成功
+[2025-01-13 03:22:03] 用户ID有效: Data: {"user_id":133}
+[2025-01-13 03:22:03] SQL准备成功
+[2025-01-13 03:22:03] SQL执行成功
+[2025-01-13 03:22:03] 数据库返回的原始数据 Data: {"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":null,"avatar_url":"Image\/defaut-avatar.png"}
+[2025-01-13 03:22:03] 处理后的用户数据 Data: {"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":"","avatar_url":"Image\/defaut-avatar.png"}
+[2025-01-13 03:22:03] 检查头像文件 Data: {"avatar_url":"Image\/defaut-avatar.png","avatar_path":"..\/Image\/defaut-avatar.png","real_path":false,"file_exists":false}
+[2025-01-13 03:22:03] 头像文件不存在，使用默认头像
+[2025-01-13 03:22:03] 准备返回数据 Data: {"success":true,"user":{"first_name":"chenggong","last_name":"Chenggong","email":"chenggong.zhang@etu.estia.fr","phone":"","avatar_url":"Image\/default-avatar.png"}}
+[2025-01-13 03:22:03] User accessed profile page Data: {"user_id":133}
+[2025-01-13 03:22:03] 获取用户专业列表
+[2025-01-13 03:22:03] 用户专业列表 Data: {"specialities":[]}
+[2025-01-13 03:22:05] User accessed profile page Data: {"user_id":133}
+[2025-01-13 03:22:05] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["robo"]}
+[2025-01-13 03:22:05] 专业更新成功 Data: {"specialities":["robo"]}
+[2025-01-13 04:47:56] User accessed profile page Data: {"user_id":133}
+[2025-01-13 04:47:56] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["robo","meca"]}
+[2025-01-13 04:47:58] User accessed profile page Data: {"user_id":133}
+[2025-01-13 04:47:58] 更新专业选择 Data: {"action":"updateSpecialities","specialities":["robo","phys"]}

@@ -1,0 +1,1065 @@
+/* CSS Variables */
+:root {
+  /* 主色调 */
+  --sky-blue: #00bfff; /* 天蓝色 */
+  --light-blue: #87ceeb; /* 浅蓝色 */
+  --deep-blue: #0066cc; /* 深蓝色 */
+  --cyber-black: #0a1525; /* 深蓝黑 */
+
+  /* 更新主色调 */
+  --primary-color: var(--sky-blue);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--deep-blue);
+
+  /* 背景色 */
+  --bg-primary: var(--cyber-black);
+  --bg-secondary: #0f1d32; /* 深蓝背景 */
+  --bg-tertiary: #142942; /* 稍浅蓝背景 */
+
+  /* 网格颜色 */
+  --grid-color: rgba(0, 191, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cyber-black);
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 191, 255, 0.15) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(135, 206, 235, 0.15) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 102, 204, 0.1) 0%,
+      transparent 50%
+    );
+  animation: backgroundShift 15s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--grid-color) 1px, transparent 1px) 0 0 /
+      50px 50px,
+    linear-gradient(var(--grid-color) 1px, transparent 1px) 0 0 / 50px 50px;
+  pointer-events: none;
+  animation: gridMove 15s linear infinite;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 15px;
+}
+
+.login-container {
+  background: rgba(15, 29, 50, 0.85);
+  border: 1px solid var(--sky-blue);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2),
+    inset 0 0 20px rgba(0, 191, 255, 0.1);
+  animation: containerPulse 4s ease-in-out infinite;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--sky-blue),
+    var(--light-blue),
+    var(--sky-blue)
+  );
+  border-radius: 24px;
+  z-index: -1;
+  animation: borderGlow 3s linear infinite;
+  opacity: 0.5;
+}
+
+/* 标题样式优化 */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+/* 标签页样式 */
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 0 40px;
+  gap: 15px;
+}
+
+.tab-btn {
+  flex: 1;
+  height: 42px;
+  padding: 0 20px;
+  border: 1px solid var(--sky-blue);
+  border-radius: 6px;
+  background: rgba(0, 191, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+}
+
+.tab-btn::after {
+  display: none;
+}
+
+.tab-btn.active {
+  color: var(--text-primary);
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+.tab-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 图标样式 */
+.tab-btn i {
+  font-size: 16px;
+}
+
+/* 表单容器 */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* 用户类型选择器优化 */
+.user-type-selector {
+  background: rgba(0, 191, 255, 0.05);
+  border: 1px solid var(--sky-blue);
+  border-radius: 16px;
+  padding: 6px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.user-type-option {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-type-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.radio-label i {
+  font-size: 18px;
+}
+
+.user-type-option input[type="radio"]:checked + .radio-label {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* 表单组样式优化 */
+.form-group {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group label i {
+  margin-right: 8px;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+/* 输入框样式优化 */
+input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--sky-blue);
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+}
+
+input:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.1),
+    0 0 15px rgba(135, 206, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+/* 密码输入框容器 */
+.password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+}
+
+.toggle-password:hover {
+  color: var(--accent-color);
+}
+
+/* 表单选项样式 */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.forgot-password {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: white;
+}
+
+/* 提交按钮样式优化 */
+.submit-btn {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+  width: 100%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-shadow: 0 0 8px var(--sky-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: buttonShine 3s linear infinite;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(45deg, var(--deep-blue), var(--sky-blue));
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+
+/* 注册步骤样式 */
+.register-steps {
+  position: relative;
+  min-height: 250px;
+}
+
+.register-step {
+  display: none;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.register-step.active {
+  display: block;
+}
+
+/* 步骤按钮样式 */
+.step-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.prev-step,
+.next-step {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.prev-step {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.next-step {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.prev-step:hover,
+.next-step:hover {
+  transform: translateY(-2px);
+}
+
+/* 进度指示器样式 */
+.register-progress {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.progress-step {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--sky-blue);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.progress-step.active {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* 动画效果优化 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 工具类 */
+.hidden {
+  display: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    max-width: 400px;
+  }
+
+  .login-container {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .tabs {
+    padding: 0 20px;
+    flex-direction: row;
+    height: 40px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .tab-btn {
+    padding: 10px 0;
+    min-width: 0;
+    font-size: 13px;
+  }
+
+  .tab-btn i {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Amélioration des états de focus pour l'accessibilité */
+input:focus,
+button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.2);
+}
+
+/* Amélioration des messages d'erreur */
+.form-group.error input {
+  border-color: var(--error-color);
+  background-color: rgba(255, 77, 77, 0.05);
+}
+
+.error-message {
+  color: white;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-group.error .error-message {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Amélioration de l'indicateur de force du mot de passe */
+.password-strength {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.password-strength-bar {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.strength-weak {
+  width: 33.33%;
+  background: #666666;
+}
+
+.strength-medium {
+  width: 66.66%;
+  background: #999999;
+}
+
+.strength-strong {
+  width: 100%;
+  background: white;
+}
+
+/* Amélioration de l'animation des étapes */
+.register-step {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
+.register-step.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Amélioration de l'accessibilité des boutons radio */
+.user-type-option input[type="radio"]:focus + .radio-label {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Support du mode sombre système */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0a0f18;
+    --bg-secondary: #141b2d;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Amélioration de la réactivité */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Animation de chargement pour les soumissions de formulaire */
+.submit-btn.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.submit-btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  .tabs {
+    padding: 0 20px;
+  }
+
+  .tab-btn {
+    height: 38px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .tab-btn i {
+    font-size: 14px;
+  }
+}
+
+/* 实时反馈效果 */
+.form-group.success input {
+  border-color: var(--success-color);
+  background-color: rgba(0, 204, 136, 0.05);
+}
+
+/* 添加悬浮效果 */
+.user-type-selector,
+.tab-btn {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-type-selector:hover,
+.tab-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* 添加动画效果 */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* 选中状态的单选按钮样式 */
+.user-type-option input[type="radio"]:checked + .radio-label {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* 进度指示器样式优化 */
+.progress-step.active {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* 动画效果 */
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes containerPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2),
+      inset 0 0 20px rgba(0, 191, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3),
+      inset 0 0 30px rgba(0, 191, 255, 0.2);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes buttonShine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* 直接访问按钮样式 */
+.direct-access-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(45deg, var(--deep-blue), var(--light-blue));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.direct-access-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+}
+
+.direct-access-btn i {
+  font-size: 16px;
+}
+
+/* 返回按钮样式 */
+.back-btn.submit-btn {
+  background: linear-gradient(45deg, #6c757d, #495057);
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.back-btn.submit-btn:hover {
+  background: linear-gradient(45deg, #495057, #343a40);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 确认消息容器样式 */
+.message-container {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.message-container i {
+  font-size: 48px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.message-container p {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 动画效果 */
+.message-container.hidden {
+  display: none;
+}
+
+.message-container:not(.hidden) {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 条款复选框样式 */
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(0, 191, 255, 0.05);
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.terms-text {
+  display: inline-block;
+  line-height: 12px;
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.terms-label input[type="checkbox"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid var(--sky-blue);
+  border-radius: 2px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 12px;
+  min-width: 12px;
+  max-width: 12px;
+  min-height: 12px;
+  max-height: 12px;
+  box-sizing: border-box;
+}
+
+.terms-label input[type="checkbox"]:checked {
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  border-color: transparent;
+}
+
+.terms-label input[type="checkbox"]:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.terms-label input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.3);
+  outline: none;
+}
+
+/* 更新表单组样式，确保条款复选框组对齐 */
+.form-group .terms-label {
+  margin: 0;
+  width: 100%;
+}
+
+/* Message Container Styles */
+.message-container {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.message-container.hidden {
+  display: none;
+}
+
+.info-message {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.success-message {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+/* 密码重置卡片样式 */
+.reset-card {
+  background: rgba(15, 29, 50, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--sky-blue);
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.reset-card h2 {
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* 返回按钮样式 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.back-link i {
+  font-size: 0.9em;
+}
+
+/* 重置表单样式 */
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reset-form .form-group {
+  margin-bottom: 15px;
+}
+
+.reset-form .submit-btn {
+  margin-top: 10px;
+}
+
+/* 表单页脚样式 */
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 返回按钮样式 */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.back-link i {
+  font-size: 0.9em;
+}
+
+button.back-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+}
+
+button.back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 重置码样式 */
+.reset-code {
+  font-family: monospace;
+  font-size: 24px;
+  color: var(--sky-blue);
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(0, 191, 255, 0.1);
+  border-radius: 8px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.message-container h3 {
+  font-family: monospace;
+  font-size: 28px !important;
+  color: var(--sky-blue) !important;
+  text-align: center;
+  margin: 15px 0 !important;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.message-container p {
+  color: var(--text-secondary);
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 如果有任何导入语句，需要修改为使用 baseUrl */
+@import url(`${baseUrl}Configuration_Js/variables.css`);  /* 如果存在的话 */

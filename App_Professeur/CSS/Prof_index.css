@@ -1,0 +1,530 @@
+/* 修改导入路径 */
+@import "../CSS/Fond_variable.css";
+
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 添加网格背景效果 */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--grid-color) 1px, transparent 1px) 0 0 /
+      50px 50px,
+    linear-gradient(var(--grid-color) 1px, transparent 1px) 0 0 / 50px 50px;
+  pointer-events: none;
+  animation: gridMove 15s linear infinite;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(15, 29, 50, 0.85);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid var(--sky-blue);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* 主要内容区域 */
+.main-content {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-primary);
+}
+
+/* 侧边栏滚动条样式 */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* 导航链接容器 */
+.nav-links {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+/* 导航链接样式 */
+.nav-links li {
+  margin-bottom: 5px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links li.active a {
+  color: var(--text-primary);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 191, 255, 0.1) 0%,
+    transparent 100%
+  );
+  border-left: 3px solid var(--sky-blue);
+}
+
+.nav-links i {
+  width: 20px;
+  text-align: center;
+}
+
+/* 侧边栏头部 */
+.sidebar-header {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid var(--sky-blue);
+  object-fit: cover;
+}
+
+.teacher-name {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* 顶部栏样式 */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px 25px;
+  background: rgba(15, 29, 50, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--sky-blue);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+  border-radius: 12px;
+  max-width: calc(100% - 300px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(15, 29, 50, 0.5);
+  border-radius: 8px;
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  border-color: var(--sky-blue);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+}
+
+.search-bar i {
+  color: var(--text-secondary);
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.search-bar i:hover {
+  color: var(--sky-blue);
+  background: rgba(0, 191, 255, 0.1);
+}
+
+.search-bar i:active {
+  transform: scale(0.95);
+  background: rgba(0, 191, 255, 0.2);
+}
+
+.search-bar.searching i {
+  color: var(--sky-blue);
+  animation: searchPulse 1.5s infinite;
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.search-bar.searching input {
+  width: 300px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+@keyframes searchPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 191, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 191, 255, 0);
+  }
+}
+
+/* 通知和设置按钮 */
+.top-bar-right {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  z-index: 101;
+}
+
+.notification-btn,
+.settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.notification-btn:hover,
+.settings-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(45deg, var(--sky-blue), var(--deep-blue));
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 内容区域样式 */
+#content-area {
+  position: relative;
+  min-height: calc(100vh - 140px);
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 页面内容样式 */
+.page-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.page-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+/* 导航分隔线 */
+.nav-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-color),
+    transparent
+  );
+  margin: 1rem 0;
+  list-style: none;
+}
+
+/* 退出登录按钮 */
+.logout-item {
+  margin-top: auto;
+  list-style: none;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+
+.logout-btn i {
+  font-size: 1.2rem;
+}
+
+/* 确保导航链接容器占满剩余空间 */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px); /* 减去头部高度 */
+  padding: 1rem;
+}
+
+/* 通知容器 */
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 300px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+.notification-dropdown.active {
+  display: block;
+}
+
+.notification-item {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background-color: var(--hover-color);
+}
+
+/* 通知按钮样式 */
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* 通知下拉菜单样式 */
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 300px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.notification-dropdown.active {
+  display: block;
+}
+
+.notification-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.notification-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.notification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: var(--hover-color);
+}
+
+.notification-item.unread {
+  background-color: var(--bg-highlight);
+}
+
+.notification-icon {
+  margin-right: 12px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.notification-time {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* 通知和设置容器 */
+.notification-container,
+.settings-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 按钮样式 */
+.notification-btn,
+.settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+/* 下拉菜单基础样式 */
+.notification-dropdown,
+.settings-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 300px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+/* 显示下拉菜单 */
+.notification-dropdown.active,
+.settings-dropdown.active {
+  display: block;
+}
+
+/* 确保下拉菜单在其他元素之上 */
+.top-bar {
+  position: relative;
+  z-index: 100;
+}
+
+.top-bar-right {
+  position: relative;
+  z-index: 101;
+}

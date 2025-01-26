@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <base href="https://chenggongzhang996.github.io/Web/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace de Connexion</title>
+    <link rel="stylesheet" href="./inscription.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="./inscription.js"></script>
+    <script type="module" src="./test_DB.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-container">
+        <h1>Espace de Connexion</h1>
+        <div class="tabs">
+          <button class="tab-btn active" onclick="showLogin()">
+            <i class="fas fa-sign-in-alt"></i> Connexion
+          </button>
+          <button class="tab-btn" onclick="showRegister()">
+            <i class="fas fa-user-plus"></i> Créer un compte
+          </button>
+        </div>
+
+        <!-- Formulaire de connexion -->
+        <form id="loginForm" class="form-container">
+          <div class="user-type-selector">
+            <label class="user-type-option">
+              <input type="radio" name="loginUserType" value="student" />
+              <span class="radio-label">
+                <i class="fas fa-user-graduate"></i>
+                Élève
+              </span>
+            </label>
+            <label class="user-type-option">
+              <input type="radio" name="loginUserType" value="tutor" checked />
+              <span class="radio-label">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Tuteur
+              </span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="loginEmail">
+              <i class="fas fa-envelope"></i> Adresse email
+            </label>
+            <input
+              type="email"
+              id="loginEmail"
+              name="loginEmail"
+              value="chenggong.zhang@etu.estia"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">
+              <i class="fas fa-lock"></i> Mot de passe
+            </label>
+            <div class="password-input">
+              <input
+                type="password"
+                id="loginPassword"
+                name="loginPassword"
+                value="757850510"
+                required
+              />
+              <button type="button" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe" />
+              Se souvenir de moi
+            </label>
+            <a href="/Inscription/forgot_password.html" class="forgot-password"
+              >Mot de passe oublié ?</a
+            >
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-sign-in-alt"></i> Se connecter
+          </button>
+          <!-- <button type="button" class="direct-access-btn">
+            <i class="fas fa-external-link-alt"></i> Accès Direct (Sans Authentification)
+          </button> -->
+        </form>
+
+        <!-- Formulaire d'inscription -->
+        <form id="registerForm" class="form-container hidden">
+          <div class="register-steps">
+            <!-- Step 1: Type & Basic Info -->
+            <div class="register-step active" data-step="1">
+              <div class="user-type-selector">
+                <label class="user-type-option">
+                  <input
+                    type="radio"
+                    name="user_type"
+                    value="student"
+                    required
+                  />
+                  <span class="radio-label">
+                    <i class="fas fa-user-graduate"></i>
+                    Élève
+                  </span>
+                </label>
+                <label class="user-type-option">
+                  <input
+                    type="radio"
+                    name="user_type"
+                    value="tutor"
+                    checked
+                    required
+                  />
+                  <span class="radio-label">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Tuteur
+                  </span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="first_name">
+                  <i class="fas fa-user"></i> Prénom
+                </label>
+                <input type="text" id="first_name" name="first_name" required />
+              </div>
+              <div class="form-group">
+                <label for="last_name"> <i class="fas fa-user"></i> Nom </label>
+                <input type="text" id="last_name" name="last_name" required />
+              </div>
+              <div class="step-buttons">
+                <button type="button" class="prev-step">
+                  <i class="fas fa-arrow-left"></i> Précédent
+                </button>
+                <button type="button" class="next-step">
+                  Suivant <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Contact Info -->
+            <div class="register-step" data-step="2">
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Adresse email
+                </label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  <i class="fas fa-phone"></i> Numéro de téléphone
+                </label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="step-buttons">
+                <button type="button" class="prev-step">
+                  <i class="fas fa-arrow-left"></i> Précédent
+                </button>
+                <button type="button" class="next-step">
+                  Suivant <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Password -->
+            <div class="register-step" data-step="3">
+              <div class="form-group">
+                <label for="password">
+                  <i class="fas fa-lock"></i> Mot de passe
+                </label>
+                <div class="password-input">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button type="button" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="confirm_password">
+                  <i class="fas fa-lock"></i> Confirmer le mot de passe
+                </label>
+                <div class="password-input">
+                  <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    required
+                  />
+                  <button type="button" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="terms-label">
+                  <input type="checkbox" name="terms" required />
+                  <div class="terms-text">
+                    J'accepte les conditions d'utilisation
+                  </div>
+                </label>
+              </div>
+              <div class="step-buttons">
+                <button type="button" class="prev-step">
+                  <i class="fas fa-arrow-left"></i> Précédent
+                </button>
+                <button type="submit" class="submit-btn">
+                  <i class="fas fa-user-plus"></i> S'inscrire
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress indicator -->
+          <div class="register-progress">
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-step" data-step="3">3</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
