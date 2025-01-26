@@ -1,10 +1,9 @@
 import { baseUrl } from "../../../Configuration_Js/base-url.js";
-import { dbService } from "../../../Configuration_Js/db-service.js";
 import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
 
 class CalendarDB {
   constructor() {
-    this.db = dbService;
+    this.db = supabaseClient;
     // 添加缓存
     this.cache = {
       events: new Map(), // 事件缓存
@@ -30,86 +29,18 @@ class CalendarDB {
 
   async getEvents(startDate, endDate) {
     try {
-      // 获取当前用户
-      let user = this.cache.user;
-      if (!user) {
-        const {
-          data: { user: currentUser },
-          error: userError,
-        } = await supabaseClient.auth.getUser();
-        if (userError || !currentUser?.id) {
-          this.log("error", "未找到认证用户");
-          return [];
-        }
-        user = currentUser;
-        this.cache.user = user;
-      }
+      const { data, error } = await this.db
+        .from('calendar_events')
+        .select('*')
+        .gte('start_time', startDate)
+        .lte('end_time', endDate);
 
-      // 检查缓存
-      const cacheKey = this.getCacheKey(startDate, endDate);
-      if (this.isCacheValid(startDate, endDate)) {
-        this.log("info", "使用缓存数据");
-        return this.cache.events.get(cacheKey);
-      }
-
-      // 查询数据库
-      const { data: manualEvents, error } = await supabaseClient
-        .from("professor_events_manual")
-        .select(
-          "id, title, description, start_at, end_at, color, professor_id, user_id, status, location, is_all_day"
-        )
-        .eq("user_id", user.id)
-        .gte("start_at", startDate)
-        .lte("end_at", endDate)
-        .order("start_at", { ascending: true });
-
-      if (error) {
-        this.log("error", "获取事件时出错");
-        return [];
-      }
-
-      if (!manualEvents || manualEvents.length === 0) {
-        return [];
-      }
-
-      // 批量处理事件
-      const processedEvents = this.processEvents(manualEvents);
-
-      // 更新缓存
-      this.cache.events.set(cacheKey, processedEvents);
-      this.cache.lastFetch = Date.now();
-
-      return processedEvents;
+      if (error) throw error;
+      return data;
     } catch (error) {
-      this.log("error", "获取事件时发生错误");
-      return [];
+      console.error("Error in getEvents:", error);
+      throw error;
     }
-  }
-
-  // 批量处理事件
-  processEvents(events) {
-    return events
-      .map((event) => {
-        try {
-          return {
-            id: event.id,
-            title: event.title,
-            description: event.description,
-            start: new Date(event.start_at),
-            end: new Date(event.end_at),
-            color: event.color || "#4CAF50",
-            professor_id: event.professor_id,
-            user_id: event.user_id,
-            status: event.status || "active",
-            location: event.location,
-            is_all_day: event.is_all_day === 1,
-            event_type: "manual",
-          };
-        } catch {
-          return null;
-        }
-      })
-      .filter(Boolean);
   }
 
   async addEvent(eventData) {
@@ -165,7 +96,7 @@ class CalendarDB {
 
       return result;
     } catch (error) {
-      this.log("error", "保存事件失败");
+      console.error("Error in addEvent:", error);
       throw error;
     }
   }

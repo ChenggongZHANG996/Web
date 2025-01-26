@@ -1,6 +1,6 @@
 import { baseUrl } from "../../Configuration_Js/base-url.js";
 import { supabaseClient } from "../../Configuration_Js/supabase-config.js";
-import { calendarService } from "./services/calendar-service.js";
+import { calendarService } from "./services/2_calendrier.js";
 import { calendarModel } from "./models/2_calendrier.js";
 import { dbService } from "../../Configuration_Js/db-service.js";
 

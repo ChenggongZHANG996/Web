@@ -1,5 +1,6 @@
 import { baseUrl } from "../../../Configuration_Js/base-url.js";
-import { calendarDB } from `${baseUrl}App_Professeur/JS/database/2_calendrier.js`;
+import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
+import { calendarDB } from "../database/2_calendrier.js";
 
 class CalendarService {
   constructor() {
