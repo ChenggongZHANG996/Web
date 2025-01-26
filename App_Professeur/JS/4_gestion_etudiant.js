@@ -49,7 +49,7 @@ export async function initialize() {
 async function fetchAndRenderStudents() {
   try {
     const students = await studentService.getStudents();
-    state.students = students;
+    state.students = students || [];
     renderStudents();
   } catch (error) {
     console.error("Error fetching students:", error);
@@ -277,7 +277,7 @@ window.handleEditStudent = (id) => {
 window.handleDeleteStudent = async (id) => {
   if (confirm("Êtes-vous sûr de vouloir supprimer cet étudiant ?")) {
     try {
-      await studentDB.deleteStudent(id);
+      await studentService.deleteStudent(id);
       await fetchAndRenderStudents();
     } catch (error) {
       console.error("Error deleting student:", error);

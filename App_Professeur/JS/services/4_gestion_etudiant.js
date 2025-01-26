@@ -7,19 +7,39 @@ class StudentService {
   }
 
   async getStudents() {
-    return await this.db.getStudents();
+    try {
+      return await this.db.getStudents();
+    } catch (error) {
+      console.error("Error in StudentService.getStudents:", error);
+      throw error;
+    }
   }
 
   async createStudent(studentData) {
-    return await this.db.createStudent(studentData);
+    try {
+      return await this.db.createStudent(studentData);
+    } catch (error) {
+      console.error("Error in StudentService.createStudent:", error);
+      throw error;
+    }
   }
 
   async updateStudent(id, studentData) {
-    return await this.db.updateStudent(id, studentData);
+    try {
+      return await this.db.updateStudent(id, studentData);
+    } catch (error) {
+      console.error("Error in StudentService.updateStudent:", error);
+      throw error;
+    }
   }
 
   async deleteStudent(id) {
-    return await this.db.deleteStudent(id);
+    try {
+      return await this.db.deleteStudent(id);
+    } catch (error) {
+      console.error("Error in StudentService.deleteStudent:", error);
+      throw error;
+    }
   }
 }
 

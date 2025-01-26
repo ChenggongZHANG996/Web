@@ -1,6 +1,5 @@
 import { baseUrl } from "../../../Configuration_Js/base-url.js";
 import { dbService } from "../../../Configuration_Js/db-service.js";
-import { supabaseClient } from "../../../Configuration_Js/supabase-config.js";
 
 class StudentDB {
   constructor() {
@@ -15,9 +14,9 @@ class StudentDB {
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      return data;
+      return data || [];
     } catch (error) {
-      console.error("Error fetching students:", error);
+      console.error("Error in StudentDB.getStudents:", error);
       throw error;
     }
   }
@@ -33,7 +32,7 @@ class StudentDB {
       if (error) throw error;
       return data;
     } catch (error) {
-      console.error("Error creating student:", error);
+      console.error("Error in StudentDB.createStudent:", error);
       throw error;
     }
   }
@@ -50,7 +49,7 @@ class StudentDB {
       if (error) throw error;
       return data;
     } catch (error) {
-      console.error("Error updating student:", error);
+      console.error("Error in StudentDB.updateStudent:", error);
       throw error;
     }
   }
@@ -65,11 +64,10 @@ class StudentDB {
       if (error) throw error;
       return true;
     } catch (error) {
-      console.error("Error deleting student:", error);
+      console.error("Error in StudentDB.deleteStudent:", error);
       throw error;
     }
   }
 }
 
-// 确保导出名称正确
 export const studentDB = new StudentDB();
