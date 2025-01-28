@@ -214,13 +214,90 @@ document.addEventListener('DOMContentLoaded', function() {
         writeLog(`Showing registration step ${stepNumber}`, "NAVIGATION");
     }
 
-    // 验证当前步骤的输入
+    // 添加密码验证函数
+    function validatePassword(password) {
+        // 至少8个字符，包含大小写字母、数字和特殊字符
+        const minLength = password.length >= 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumbers = /\d/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        return {
+            isValid: minLength && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar,
+            errors: {
+                minLength: !minLength,
+                hasUpperCase: !hasUpperCase,
+                hasLowerCase: !hasLowerCase,
+                hasNumbers: !hasNumbers,
+                hasSpecialChar: !hasSpecialChar
+            }
+        };
+    }
+
+    // 添加邮箱验证函数
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // 添加电话号码验证函数
+    function validatePhone(phone) {
+        // 法国手机号格式
+        const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+        return phoneRegex.test(phone);
+    }
+
+    // 修改validateStep函数
     function validateStep(step) {
         const inputs = step.querySelectorAll('input[required]');
         let isValid = true;
+        let errors = [];
         
         inputs.forEach(input => {
-            if (!input.value.trim()) {
+            let fieldValid = true;
+            const value = input.value.trim();
+
+            if (!value) {
+                fieldValid = false;
+                errors.push(`Le champ ${input.name} est requis`);
+            } else {
+                // 特定字段的验证
+                switch(input.name) {
+                    case 'email':
+                        if (!validateEmail(value)) {
+                            fieldValid = false;
+                            errors.push("Format d'email invalide");
+                        }
+                        break;
+                    case 'phone':
+                        if (!validatePhone(value)) {
+                            fieldValid = false;
+                            errors.push("Format de numéro de téléphone invalide");
+                        }
+                        break;
+                    case 'password':
+                        const passwordValidation = validatePassword(value);
+                        if (!passwordValidation.isValid) {
+                            fieldValid = false;
+                            if (passwordValidation.errors.minLength) errors.push("Le mot de passe doit contenir au moins 8 caractères");
+                            if (passwordValidation.errors.hasUpperCase) errors.push("Le mot de passe doit contenir au moins une majuscule");
+                            if (passwordValidation.errors.hasLowerCase) errors.push("Le mot de passe doit contenir au moins une minuscule");
+                            if (passwordValidation.errors.hasNumbers) errors.push("Le mot de passe doit contenir au moins un chiffre");
+                            if (passwordValidation.errors.hasSpecialChar) errors.push("Le mot de passe doit contenir au moins un caractère spécial");
+                        }
+                        break;
+                    case 'confirm_password':
+                        const password = step.querySelector('input[name="password"]').value;
+                        if (value !== password) {
+                            fieldValid = false;
+                            errors.push("Les mots de passe ne correspondent pas");
+                        }
+                        break;
+                }
+            }
+
+            if (!fieldValid) {
                 isValid = false;
                 input.classList.add('error');
                 writeLog(`Validation failed for field: ${input.name}`, "VALIDATION");
@@ -229,7 +306,36 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        if (!isValid) {
+            // 显示错误消息
+            showErrors(errors);
+        }
+
         return isValid;
+    }
+
+    // 添加错误显示函数
+    function showErrors(errors) {
+        // 移除现有的错误消息
+        const existingErrors = document.querySelectorAll('.error-message');
+        existingErrors.forEach(error => error.remove());
+
+        // 创建新的错误消息容器
+        const errorContainer = document.createElement('div');
+        errorContainer.className = 'error-message';
+        errorContainer.style.color = 'red';
+        errorContainer.style.marginTop = '10px';
+        errorContainer.style.fontSize = '14px';
+
+        errors.forEach(error => {
+            const errorElement = document.createElement('p');
+            errorElement.textContent = error;
+            errorContainer.appendChild(errorElement);
+        });
+
+        // 添加到表单中
+        const currentStep = document.querySelector('.register-step.active');
+        currentStep.appendChild(errorContainer);
     }
 
     // 下一步按钮点击事件
@@ -329,6 +435,67 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             writeLog(`Erreur de connexion: ${error.message}`, "error");
             showError(error.message);
+        }
+    });
+
+    // 注册表单提交处理
+    registerForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        writeLog("Starting registration process", "AUTH");
+
+        // 收集所有表单数据
+        const formData = {
+            user_type: document.querySelector('input[name="user_type"]:checked').value,
+            first_name: document.getElementById('first_name').value,
+            last_name: document.getElementById('last_name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            password: document.getElementById('password').value
+        };
+
+        try {
+            // 1. 创建认证用户
+            const { data: { user }, error: authError } = await supabaseClient.auth.signUp({
+                email: formData.email,
+                password: formData.password,
+                options: {
+                    data: {
+                        first_name: formData.first_name,
+                        last_name: formData.last_name,
+                        user_type: formData.user_type
+                    }
+                }
+            });
+
+            if (authError) throw authError;
+
+            // 2. 创建用户配置文件
+            const { error: profileError } = await supabaseClient
+                .from('users')
+                .insert([
+                    {
+                        id: user.id,
+                        first_name: formData.first_name,
+                        last_name: formData.last_name,
+                        email: formData.email,
+                        phone: formData.phone,
+                        user_type: formData.user_type
+                    }
+                ]);
+
+            if (profileError) throw profileError;
+
+            writeLog("Registration successful", "SUCCESS");
+            
+            // 显示成功消息
+            alert("Inscription réussie ! Veuillez vérifier votre email pour confirmer votre compte.");
+            
+            // 重定向到登录页面
+            showLogin();
+
+        } catch (error) {
+            writeLog(`Registration error: ${error.message}`, "ERROR");
+            showErrors([`Erreur d'inscription: ${error.message}`]);
         }
     });
 });
