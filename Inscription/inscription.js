@@ -340,11 +340,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 下一步按钮点击事件
     nextButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', async function(e) {
             e.preventDefault();
             const currentStep = this.closest('.register-step');
             const currentStepNumber = parseInt(currentStep.dataset.step);
             
+            // 如果是第二步（邮箱输入步骤），检查邮箱是否已存在
+            if (currentStepNumber === 2) {
+                const emailInput = document.getElementById('email');
+                if (emailInput && emailInput.value) {
+                    try {
+                        const { data: existingUser, error: checkError } = await supabaseClient
+                            .from('users')
+                            .select('email')
+                            .eq('email', emailInput.value)
+                            .single();
+
+                        if (existingUser) {
+                            showErrors(["Un utilisateur avec cet email existe déjà"]);
+                            writeLog("Email already exists", "ERROR");
+                            return;
+                        }
+                    } catch (error) {
+                        // 如果是没找到用户的错误，说明邮箱可用，继续处理
+                        if (error.message !== 'No rows found') {
+                            showErrors([`Erreur lors de la vérification de l'email: ${error.message}`]);
+                            writeLog(`Email check error: ${error.message}`, "ERROR");
+                            return;
+                        }
+                    }
+                }
+            }
+
             if (validateStep(currentStep)) {
                 if (currentStepNumber < 3) {
                     showStep(currentStepNumber + 1);
@@ -454,8 +481,19 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         try {
-            // 1. 创建认证用户
-            const { data: { user }, error: authError } = await supabaseClient.auth.signUp({
+            // 1. 检查用户是否已存在
+            const { data: existingUser, error: checkError } = await supabaseClient
+                .from('users')
+                .select('email')
+                .eq('email', formData.email)
+                .single();
+
+            if (existingUser) {
+                throw new Error("Un utilisateur avec cet email existe déjà");
+            }
+
+            // 2. 创建认证用户
+            const { data, error: authError } = await supabaseClient.auth.signUp({
                 email: formData.email,
                 password: formData.password,
                 options: {
@@ -469,21 +507,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (authError) throw authError;
 
-            // 2. 创建用户配置文件
+            if (!data.user) {
+                throw new Error("Erreur lors de la création de l'utilisateur");
+            }
+
+            // 3. 创建用户配置文件
             const { error: profileError } = await supabaseClient
                 .from('users')
                 .insert([
                     {
-                        id: user.id,
+                        id: data.user.id,
                         first_name: formData.first_name,
                         last_name: formData.last_name,
                         email: formData.email,
                         phone: formData.phone,
-                        user_type: formData.user_type
+                        user_type: formData.user_type,
+                        created_at: new Date().toISOString()
                     }
                 ]);
 
-            if (profileError) throw profileError;
+            if (profileError) {
+                // 如果创建配置文件失败，需要删除认证用户
+                await supabaseClient.auth.admin.deleteUser(data.user.id);
+                throw profileError;
+            }
 
             writeLog("Registration successful", "SUCCESS");
             
