@@ -187,7 +187,85 @@ document.addEventListener('DOMContentLoaded', function() {
         throw new Error("Required form elements not found");
     }
 
-    // ... 其余的初始化代码 ...
+    // 注册表单步骤切换逻辑
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+    const steps = document.querySelectorAll('.register-step');
+    const progressSteps = document.querySelectorAll('.progress-step');
+
+    function updateProgress(currentStep) {
+        progressSteps.forEach((step, index) => {
+            if (index < currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+    }
+
+    function showStep(stepNumber) {
+        steps.forEach(step => {
+            step.classList.remove('active');
+            if (step.dataset.step === stepNumber.toString()) {
+                step.classList.add('active');
+            }
+        });
+        updateProgress(stepNumber);
+        writeLog(`Showing registration step ${stepNumber}`, "NAVIGATION");
+    }
+
+    // 验证当前步骤的输入
+    function validateStep(step) {
+        const inputs = step.querySelectorAll('input[required]');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                isValid = false;
+                input.classList.add('error');
+                writeLog(`Validation failed for field: ${input.name}`, "VALIDATION");
+            } else {
+                input.classList.remove('error');
+            }
+        });
+
+        return isValid;
+    }
+
+    // 下一步按钮点击事件
+    nextButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentStep = this.closest('.register-step');
+            const currentStepNumber = parseInt(currentStep.dataset.step);
+            
+            if (validateStep(currentStep)) {
+                if (currentStepNumber < 3) {
+                    showStep(currentStepNumber + 1);
+                    writeLog(`Moving to step ${currentStepNumber + 1}`, "NAVIGATION");
+                }
+            } else {
+                writeLog("Step validation failed", "ERROR");
+            }
+        });
+    });
+
+    // 上一步按钮点击事件
+    prevButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentStep = this.closest('.register-step');
+            const currentStepNumber = parseInt(currentStep.dataset.step);
+            
+            if (currentStepNumber > 1) {
+                showStep(currentStepNumber - 1);
+                writeLog(`Moving back to step ${currentStepNumber - 1}`, "NAVIGATION");
+            }
+        });
+    });
+
+    // 初始化显示第一步
+    showStep(1);
 
     // 添加按钮点击事件监听
     const loginBtn = document.getElementById('loginBtn');
